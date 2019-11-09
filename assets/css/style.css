@@ -1,0 +1,104 @@
+body {
+  font-family: 'Yeon Sung', cursive;
+  font-size: 1em;
+  width: 100%;
+  height: 100%;
+  background-color: #f2eee5; }
+
+.header-on-scroll {
+  height: 10vh !important;
+  min-height: 70px !important;
+  position: fixed;
+  z-index: 1;
+  font-size: 0.8em;
+  opacity: 0.8;
+  padding-top: 10px; }
+
+#header {
+  background-image: linear-gradient(to bottom, #f2eee5, #f9f1ed, #fcf5f5, #fdfafc, #ffffff);
+  height: 25vh;
+  min-height: 170px;
+  width: 100%;
+  transition: all 0.5s ease-in; }
+  #header .main-nav {
+    height: 100%;
+    width: 100%; }
+    #header .main-nav .main-nav-list {
+      padding: 0px;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      list-style-type: none; }
+      #header .main-nav .main-nav-list li {
+        display: inline;
+        padding-top: 10px;
+        padding-bottom: 10px; }
+      #header .main-nav .main-nav-list .jeune-pouce {
+        position: absolute;
+        left: 199px;
+        top: 141px;
+        filter: invert(0.2); }
+      #header .main-nav .main-nav-list .jeune-plante {
+        position: absolute;
+        left: 420px;
+        top: 137px;
+        filter: invert(0.2); }
+      #header .main-nav .main-nav-list .forest {
+        position: absolute;
+        right: 151px;
+        top: 97px;
+        filter: invert(0.2); }
+      #header .main-nav .main-nav-list .forest2 {
+        position: absolute;
+        left: 612px;
+        top: 94px;
+        filter: invert(0.2); }
+      #header .main-nav .main-nav-list .forest3 {
+        position: absolute;
+        left: 896px;
+        top: 112px;
+        filter: invert(0.2); }
+      #header .main-nav .main-nav-list .forest4 {
+        position: absolute;
+        right: 107px;
+        top: 7px;
+        filter: invert(0.2); }
+      #header .main-nav .main-nav-list a {
+        display: inline-block;
+        padding: 0.4em 1em;
+        text-decoration: none;
+        font-size: 1.5em;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: #be7575;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px; }
+        #header .main-nav .main-nav-list a::after {
+          content: "";
+          display: block;
+          width: 0;
+          margin-top: 13px;
+          height: 4px;
+          transition: width 0.2s, background 0.2s;
+          box-shadow: 1px 2px 2px white; }
+        #header .main-nav .main-nav-list a:hover::after {
+          width: 100%;
+          background: linear-gradient(to right, #be7575, #f6ad7b);
+          transition: width .6s; }
+
+#mycarousel {
+  max-height: 75vh !important;
+  width: 100%; }
+  #mycarousel img {
+    max-height: 72vh;
+    width: 100vw;
+    opacity: 0.9; }
+    #mycarousel img:hover {
+      opacity: 1; }

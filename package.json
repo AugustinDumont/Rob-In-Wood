@@ -1,0 +1,23 @@
+{
+  "name": "rob-in-wood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch assets/scss -o assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AugustinDumont/Rob-In-Wood.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AugustinDumont/Rob-In-Wood/issues"
+  },
+  "homepage": "https://github.com/AugustinDumont/Rob-In-Wood#readme",
+  "dependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
