@@ -1,7 +1,238 @@
 $background_base_color: #f2eee5;
-$grey_color:#d7d1c9;
+$grey_color: #d7d1c9;
 $green_light_color: #c2e8ce;
-$green_flash_color:#58b368;
+$green_flash_color: #58b368;
 $orange_color: #f6ad7b;
-$brown_light_color:#be7575;
-$brown_dark_color:#443737;
+$brown_light_color: #be7575;
+$brown_dark_color: #443737;
+
+/*SLIDE IN ANIMATION */
+
+.slide-in {
+  animation: slide-in 1s forwards;
+  -webkit-animation: slide-in 1s forwards;
+}
+
+@keyframes slide-in {
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slide-in {
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+
+/*SLIDE OUT ANIMATION */
+
+.slide-out {
+  animation: slide-out 1s forwards;
+  -webkit-animation: slide-out 1s forwards;
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes slide-out {
+  0% {
+    -webkit-transform: translateX(0%);
+  }
+
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+/*SLIDE DOWN ANIMATION */
+
+.slide-down {
+  animation: slide-down 1s forwards;
+  -webkit-animation: slide-down 1s forwards;
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes slide-down {
+  0% {
+    -webkit-transform: translateY(-100%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0%);
+  }
+}
+
+/*SLIDE UP ANIMATION */
+
+.slide-up {
+  animation: slide-up 1s forwards;
+  -webkit-animation: slide-up 1s forwards;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes slide-up {
+  0% {
+    -webkit-transform: translateY(100%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0%);
+  }
+}
+
+/* Float */
+.float {
+  display: inline-block;
+  transition-duration: 1000ms;
+  transition-property: transform, filter;
+
+  &:hover {
+    transform: translateY(-5px);
+    filter: invert(1);
+  }
+}
+
+/* Hover Shadow */
+@keyframes hover {
+  50% {
+    transform: translateY(-3px);
+  }
+
+  100% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes hover-shadow {
+  0% {
+    transform: translateY(6px);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translateY(3px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(6px);
+    opacity: 0.4;
+  }
+}
+
+.hover-shadow {
+  display: inline-block;
+  position: relative;
+  transition-duration: 500ms;
+  transition-property: transform;
+
+  &:before {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: "";
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    // background: radial-gradient(ellipse at center, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, 0) 80%);
+    transition-duration: 500ms;
+    transition-property: transform opacity;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    animation-name: hover;
+    animation-duration: 1.5s;
+    animation-delay: 500ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    &:before {
+      opacity: 0.4;
+      transform: translateY(6px);
+      animation-name: hover-shadow;
+      animation-duration: 1.5s;
+      animation-delay: 0.3s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+  }
+}
+
+// Effect box
+
+.effect-box {
+  background-color: white;
+  outline: none;
+  box-shadow: 20px 38px 34px -26px hsla(0, 0%, 0%, 0.2);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  filter: drop-shadow(2px 2px 2px grey);
+  border: solid 2px $green_flash_color;
+  font-size: 1.5em;
+  transition: transform 500ms ease-in-out;
+
+  &:hover {
+    box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
+  }
+}
+
+// html {
+//     -webkit-animation: forest-night 10s infinite;
+//     animation: forest-night 10s infinite;
+// }
+
+// @-webkit-keyframes forest-night {
+//     0% {
+//         filter: hue-rotate(0deg) brightness(0%);
+//     }
+
+//     10% {
+//         filter: hue-rotate(0deg) brightness(50%);
+//     }
+
+//     20% {
+//         filter: hue-rotate(0deg) brightness(100%);
+//     }
+
+//     50% {
+//         filter: hue-rotate(0deg) brightness(2);
+//     }
+
+//     70% {
+//         filter: hue-rotate(220deg) brightness(50%);
+//     }
+
+//     100% {
+//         filter: hue-rotate(0deg) brightness(0%);
+//     }
+// }

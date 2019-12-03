@@ -1,15 +1,19 @@
-window.onscroll = function () {
-    scrollFunction()
-};
+(() => {
+  window.onscroll = function() {
+    scrollFunctionFooter();
+  };
 
-function scrollFunction() {
-    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-        document.getElementById("logo-top").classList.add("d-none");
-        document.getElementById("logo-on-scroll").classList.remove("d-none");
-        document.getElementById("header").classList.add("header-on-scroll");
+  const footer = document.getElementById("footer");
+
+  function scrollFunctionFooter() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      footer.classList.add("d-none");
     } else {
-        document.getElementById("logo-top").classList.remove("d-none");
-        document.getElementById("logo-on-scroll").classList.add("d-none");
-        document.getElementById("header").classList.remove("header-on-scroll");
+      footer.classList.remove("d-none");
     }
-}
+  }
+
+  document.getElementById("icone-telephone").addEventListener("click", () => {
+    document.getElementById("telephone").classList.remove("d-none");
+  });
+})();
