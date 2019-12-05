@@ -17,16 +17,16 @@
   </head>
 
   <body>
-    <div class="header-logo">
-      <img id="logo-robinwood" src="assets/imgs/LOGOTYPE-grand.png" width="350px" alt="logo-robinwood" />
-      <button class="magasin effect-box hover-shadow">
-        <img class="basket-svg" src="assets/imgs/svg/151889-795548.svg" width="50px" />
-      </button>
-    </div>
-
-    <header></header>
-    <nav class="main-nav container">
+    <!--
+        <header></header>
+      
+      <nav class="main-nav">
       <ul class="main-nav-list">
+        <li>
+          <div class="header-logo">
+            <img id="logo-robinwood" src="assets/imgs/LOGOTYPE-grand.png" width="350px" alt="logo-robinwood" />
+          </div>
+        </li>
         <li class="hover-shadow">
           <button href="#" class="effect-box">
             <h1>menuiserie</h1>
@@ -52,14 +52,74 @@
             <h1>élagage</h1>
           </button>
         </li>
+        <li>
+          <button class="magasin effect-box hover-shadow">
+            <img class="basket-svg" src="assets/imgs/svg/151889-795548.svg" width="50px" />
+          </button>
+        </li>
       </ul>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/imgs/LOGOTYPE-grand.png" alt="logo-robinwood" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Menuiserie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Charpente</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Constructions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Elagage & Abattage</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li> -->
+          </ul>
+        </div>
+      </div>
     </nav>
 
-    <div class=" container-fluid" id="bandeau">
-      <img class="logo-bandeau" src="./assets/imgs/LOGO-grand.png" alt="image/menuiserie" />
-    </div>
-
-    <section class="introduction container">
+    <!------------------------------------------------------------------------------------------>
+    <header></header>
+<main>
+    <section class="introduction">
+      <div class="logo-white">
+        <img src="assets/imgs/logo.png"/>
+      </div>
+      <div class="container">
       <div class="row">
         <div class="col-8">
           <h2>Rob'in Wood</h2>
@@ -92,7 +152,8 @@
       </div>
     </section>
 
-    <section class="menuiserie container">
+    <section class="menuiserie grey">
+      <div class="container">
       <div class="row">
         <div class="col-4">
           <h4>Réalisations:</h4>
@@ -102,9 +163,11 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam corporis enim, reprehenderit eos praesentium molestias dignissimos incidunt voluptate deleniti omnis.</p>
         </div>
       </div>
+    </div>
     </section>
 
-    <section class="charpente container">
+    <section class="charpente">
+        <div class="container">
       <div class="row">
         <div class="col-8">
           <h2>Charpente</h2>
@@ -114,18 +177,21 @@
           <h4>Réalisations:</h4>
         </div>
       </div>
+    </div>
     </section>
 
-    <section class="construction container">
+    <section class="construction">
+        <div class="container">
       <div class="row">
         <div class="col-12">
           <h2>Construction perchée</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam corporis enim, reprehenderit eos praesentium molestias dignissimos incidunt voluptate deleniti omnis.</p>
         </div>
       </div>
+    </div>
     </section>
 
-    <section class="abattage-elagage container">
+    <section class="abattage-elagage">
       <div class="row">
         <div class="col-6">
           <h2>Abattage</h2>
@@ -139,8 +205,10 @@
     </section>
 
     <section class="formulaire"></section>
+  </main>
+  
 
-    <footer id="footer" class="slide-up">
+    <!-- <footer id="footer" class="slide-up">
       <h5>
         Pour toute demande de renseignements ou devis, n'hésitez pas à me contacter par téléphone ou via le formulaire de contact.
       </h5>
@@ -156,10 +224,10 @@
 
         <a href="#"><img src="assets/imgs/svg/2440261.svg" width="35px" class="float"/></a>
       </div>
-    </footer>
+    </footer> -->
 
-    <script src="assets/js/functions.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="assets/js/functions.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"

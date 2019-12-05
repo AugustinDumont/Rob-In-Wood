@@ -136,13 +136,78 @@
   .effect-box:hover {
     box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3); }
 
+.navbar {
+  background-color: rgba(255, 255, 255, 0);
+  transition: background 0.5s ease, box-shadow 0.5s ease;
+  z-index: 3000; }
+  .navbar.active {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important; }
+    .navbar.active .navbar-brand {
+      opacity: 1; }
+  .navbar > .container {
+    padding-left: 0;
+    padding-right: 0; }
+  .navbar .navbar-brand {
+    opacity: 0;
+    transition: opacity 0.5s ease; }
+    .navbar .navbar-brand img {
+      height: 50px; }
+  .navbar .nav-item {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+    .navbar .nav-item:last-child {
+      padding-right: 0; }
+      .navbar .nav-item:last-child .nav-link {
+        padding-right: 0; }
+    .navbar .nav-item .nav-link {
+      color: #111;
+      font-size: 1.5rem; }
+
 body {
-  background: #ece9e6;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ffffff, #ece9e6);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ffffff, #ece9e6);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-size: 14px; }
+
+header {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../imgs/jay-mantri-TFyi0QOx08c-unsplash.jpg");
+  background-size: 120% auto;
+  background-position-y: 20%;
+  background-position-x: 40%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  transition: background 0.15s ease-in-out; }
+
+main {
+  margin-top: -180px;
+  z-index: 2000;
+  position: relative; }
+
+section {
+  position: relative; }
+  section.grey > .container {
+    box-shadow: none;
+    background: none; }
+  section > .container {
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    margin-bottom: 50px;
+    padding: 100px 50px; }
+
+.logo-white {
+  padding-bottom: 40px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1; }
+  .logo-white img {
+    height: 170spx; }
+
+body {
+  background: #eee;
   font-family: "Amatic SC", cursive;
   font-size: 1em;
   width: 100%;
@@ -150,13 +215,11 @@ body {
   overflow-inline: hidden; }
   body h2 {
     color: #58b368;
-    font-weight: 600;
-    background-color: white; }
+    font-weight: 600; }
   body h3,
   body h4 {
     color: #be7575;
-    font-weight: 600;
-    background-color: white; }
+    font-weight: 600; }
   body p {
     font-family: "Josefin Sans", sans-serif;
     opacity: 0.8; }
@@ -165,13 +228,7 @@ body {
   display: flex;
   justify-content: center; }
   .header-logo #logo-robinwood {
-    padding-top: 1em;
-    filter: drop-shadow(2px 2px 2px grey); }
-
-header {
-  background: rgba(0, 0, 0, 0);
-  height: 0vh;
-  max-width: 100%; }
+    padding-top: 1em; }
 
 .main-nav {
   background: #ece9e6;
@@ -219,23 +276,13 @@ header {
   .magasin .basket-svg {
     margin: 0.3em; }
 
-.introduction {
-  margin-top: 6em;
-  margin-bottom: 6em; }
-
-.menuiserie,
-.charpente,
-.construction {
-  margin-bottom: 6em; }
-
 #bandeau {
-  min-height: 69vh;
+  height: 69vh;
   width: 100%;
   display: flex;
   justify-content: center; }
   #bandeau .logo-bandeau {
-    width: 40%;
-    filter: drop-shadow(2px 2px 2px grey); }
+    width: 40%; }
 
 footer {
   opacity: 0.9;
