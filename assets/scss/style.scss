@@ -3,6 +3,16 @@
 
 body {
   font-size: 14px;
+  h1,
+  h2,
+  h3,
+  h4,
+  a {
+    font-family: "Amatic SC", cursive;
+  }
+  p {
+    font-family: "Josefin Sans", sans-serif;
+  }
 }
 
 header {
@@ -28,35 +38,160 @@ section {
     > .container {
       box-shadow: none;
       background: none;
+      padding: 0 0;
+      margin: auto;
     }
   }
   > .container {
     background-color: #fff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-    margin-bottom: 50px;
-    padding: 100px 50px;
+    margin-bottom: 100px;
+    padding: 70px 50px;
   }
 }
 
-.logo-white {
-  padding-bottom: 40px;
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  right: 0;
-  text-align: center;
-  z-index: 1;
-  img {
-    height: 170spx;
+.introduction {
+  .logo-white {
+    padding-bottom: 40px;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+    img {
+      height: 170px;
+    }
+  }
+
+  .links {
+    padding-top: 1em;
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      color: $brown_light_color;
+      font-weight: 600;
+      font-size: 1.3em;
+      letter-spacing: 0.6px;
+      cursor: pointer;
+      &:hover {
+        color: $brown_light_color;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        margin-top: 3px;
+        height: 3px;
+        background: $brown_light_color;
+        transition: width 0.5s, background 0.5s;
+      }
+
+      &:hover::after {
+        width: 100%;
+        background: $brown_light_color;
+        transition: width 0.5s;
+      }
+    }
   }
 }
+
+.magasin {
+  margin-bottom: 100px;
+  position: relative;
+  .green-container {
+    border-radius: 1%;
+    background-color: rgba(11, 90, 50, 0.6);
+    padding: 50px 50px;
+    color: #fff;
+    font-weight: 600;
+    .link-svg {
+      display: flex;
+      align-items: center;
+      a {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.7em;
+        font-weight: 800;
+        letter-spacing: 0.6px;
+        &::after {
+          content: "";
+          display: block;
+          width: 0;
+          margin-top: 3px;
+          height: 3px;
+          background: #fff;
+          transition: width 0.5s, background 0.5s;
+        }
+        &:hover::after {
+          width: 100%;
+          background: #fff;
+          transition: width 0.5s;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: rgba(11, 90, 50, 0.6);
+        width: 500px;
+        height: 100%;
+        top: 0;
+        left: -500px;
+      }
+      img {
+        width: 30px;
+        margin-left: 50px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.img-magasin {
+  border-radius: 1%;
+  margin-top: -40vh;
+  width: 10vh;
+  height: 70vh;
+  background-image: url("../imgs/mihai-lazar-8TDltliWdJY-unsplash.jpg");
+  background-size: 100% 100%;
+  margin-right: -100px;
+}
+
+// .cycle-logo {
+//   width: 27%;
+//   height: 100%;
+//   background-image: url("../imgs/LOGO.svg");
+//   background-position: 50% 50%;
+//   background-size: 100% 100%;
+//   background-repeat: no-repeat;
+//   -webkit-animation: rotation 200s infinite linear;
+//   filter: invert(1);
+//   position: absolute;
+//   top: 75px;
+//   left: 25px;
+//   z-index: 3000;
+// }
+
+// @-webkit-keyframes rotation {
+//   from {
+//     -webkit-transform: rotate(0deg);
+//   }
+//   to {
+//     -webkit-transform: rotate(359deg);
+//   }
+// }
 
 body {
   // background: #ece9e6; /* fallback for old browsers */
   // background: -webkit-linear-gradient(to right, #ffffff, #ece9e6); /* Chrome 10-25, Safari 5.1-6 */
   // background: linear-gradient(to right, #ffffff, #ece9e6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: #eee;
-  font-family: "Amatic SC", cursive;
+  // font-family: "Amatic SC", cursive;
   font-size: 1em;
   width: 100%;
   height: 100%;
@@ -64,6 +199,7 @@ body {
   h2 {
     color: $green_flash_color;
     font-weight: 600;
+    margin-bottom: 20px;
     // background-color: white;
   }
 
@@ -124,22 +260,6 @@ body {
         transition: all 200ms ease-in-out;
       }
     }
-  }
-}
-
-.magasin {
-  position: absolute;
-  right: 55px;
-  top: 29px;
-  color: $brown_light_color;
-  border: solid 2px $brown_light_color;
-  padding: 0.1em;
-  display: flex;
-  align-items: center;
-  padding: 0.2em;
-
-  .basket-svg {
-    margin: 0.3em;
   }
 }
 

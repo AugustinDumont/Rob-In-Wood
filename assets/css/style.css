@@ -1,66 +1,5 @@
-/*SLIDE IN ANIMATION */
-.slide-in {
-  animation: slide-in 1s forwards;
-  -webkit-animation: slide-in 1s forwards; }
-
-@keyframes slide-in {
-  100% {
-    transform: translateX(0%); } }
-
-@-webkit-keyframes slide-in {
-  100% {
-    -webkit-transform: translateX(0%); } }
-
-/*SLIDE OUT ANIMATION */
-.slide-out {
-  animation: slide-out 1s forwards;
-  -webkit-animation: slide-out 1s forwards; }
-
-@keyframes slide-out {
-  0% {
-    transform: translateX(0%); }
-  100% {
-    transform: translateX(-100%); } }
-
-@-webkit-keyframes slide-out {
-  0% {
-    -webkit-transform: translateX(0%); }
-  100% {
-    -webkit-transform: translateX(-100%); } }
-
-/*SLIDE DOWN ANIMATION */
-.slide-down {
-  animation: slide-down 1s forwards;
-  -webkit-animation: slide-down 1s forwards; }
-
-@keyframes slide-down {
-  0% {
-    transform: translateY(-100%); }
-  100% {
-    transform: translateY(0%); } }
-
-@-webkit-keyframes slide-down {
-  0% {
-    -webkit-transform: translateY(-100%); }
-  100% {
-    -webkit-transform: translateY(0%); } }
-
-/*SLIDE UP ANIMATION */
-.slide-up {
-  animation: slide-up 1s forwards;
-  -webkit-animation: slide-up 1s forwards; }
-
-@keyframes slide-up {
-  0% {
-    transform: translateY(100%); }
-  100% {
-    transform: translateY(0%); } }
-
-@-webkit-keyframes slide-up {
-  0% {
-    -webkit-transform: translateY(100%); }
-  100% {
-    -webkit-transform: translateY(0%); } }
+.bolder {
+  font-weight: 600; }
 
 /* Float */
 .float {
@@ -68,8 +7,7 @@
   transition-duration: 1000ms;
   transition-property: transform, filter; }
   .float:hover {
-    transform: translateY(-5px);
-    filter: invert(1); }
+    transform: translateY(-5px); }
 
 /* Hover Shadow */
 @keyframes hover {
@@ -130,7 +68,7 @@
   box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   filter: drop-shadow(2px 2px 2px grey);
-  border: solid 2px #58b368;
+  border: solid 2px #0b7240;
   font-size: 1.5em;
   transition: transform 500ms ease-in-out; }
   .effect-box:hover {
@@ -166,6 +104,14 @@
 
 body {
   font-size: 14px; }
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body a {
+    font-family: "Amatic SC", cursive; }
+  body p {
+    font-family: "Josefin Sans", sans-serif; }
 
 header {
   height: 100vh;
@@ -188,14 +134,16 @@ section {
   position: relative; }
   section.grey > .container {
     box-shadow: none;
-    background: none; }
+    background: none;
+    padding: 0 0;
+    margin: auto; }
   section > .container {
     background-color: #fff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-    margin-bottom: 50px;
-    padding: 100px 50px; }
+    margin-bottom: 100px;
+    padding: 70px 50px; }
 
-.logo-white {
+.introduction .logo-white {
   padding-bottom: 40px;
   position: absolute;
   bottom: 100%;
@@ -203,19 +151,99 @@ section {
   right: 0;
   text-align: center;
   z-index: 1; }
-  .logo-white img {
-    height: 170spx; }
+  .introduction .logo-white img {
+    height: 170px; }
+
+.introduction .links {
+  padding-top: 1em;
+  display: flex;
+  justify-content: space-around; }
+  .introduction .links a {
+    display: inline-block;
+    text-decoration: none;
+    color: #be7575;
+    font-weight: 600;
+    font-size: 1.3em;
+    letter-spacing: 0.6px;
+    cursor: pointer; }
+    .introduction .links a:hover {
+      color: #be7575; }
+    .introduction .links a::after {
+      content: "";
+      display: block;
+      width: 0;
+      margin-top: 3px;
+      height: 3px;
+      background: #be7575;
+      transition: width 0.5s, background 0.5s; }
+    .introduction .links a:hover::after {
+      width: 100%;
+      background: #be7575;
+      transition: width 0.5s; }
+
+.magasin {
+  margin-bottom: 100px;
+  position: relative; }
+  .magasin .green-container {
+    border-radius: 1%;
+    background-color: rgba(11, 90, 50, 0.6);
+    padding: 50px 50px;
+    color: #fff;
+    font-weight: 600; }
+    .magasin .green-container .link-svg {
+      display: flex;
+      align-items: center; }
+      .magasin .green-container .link-svg a {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.7em;
+        font-weight: 800;
+        letter-spacing: 0.6px; }
+        .magasin .green-container .link-svg a::after {
+          content: "";
+          display: block;
+          width: 0;
+          margin-top: 3px;
+          height: 3px;
+          background: #fff;
+          transition: width 0.5s, background 0.5s; }
+        .magasin .green-container .link-svg a:hover::after {
+          width: 100%;
+          background: #fff;
+          transition: width 0.5s; }
+      .magasin .green-container .link-svg::before {
+        content: "";
+        position: absolute;
+        background-color: rgba(11, 90, 50, 0.6);
+        width: 500px;
+        height: 100%;
+        top: 0;
+        left: -500px; }
+      .magasin .green-container .link-svg img {
+        width: 30px;
+        margin-left: 50px;
+        margin-bottom: 10px; }
+
+.img-magasin {
+  border-radius: 1%;
+  margin-top: -40vh;
+  width: 10vh;
+  height: 70vh;
+  background-image: url("../imgs/mihai-lazar-8TDltliWdJY-unsplash.jpg");
+  background-size: 100% 100%;
+  margin-right: -100px; }
 
 body {
   background: #eee;
-  font-family: "Amatic SC", cursive;
   font-size: 1em;
   width: 100%;
   height: 100%;
   overflow-inline: hidden; }
   body h2 {
-    color: #58b368;
-    font-weight: 600; }
+    color: #0b7240;
+    font-weight: 600;
+    margin-bottom: 20px; }
   body h3,
   body h4 {
     color: #be7575;
@@ -257,24 +285,11 @@ body {
         padding: 0.1em;
         font-size: 1.5em;
         margin-bottom: 0;
-        color: #58b368;
+        color: #0b7240;
         font-weight: 500;
         letter-spacing: 2px;
         text-transform: uppercase;
         transition: all 200ms ease-in-out; }
-
-.magasin {
-  position: absolute;
-  right: 55px;
-  top: 29px;
-  color: #be7575;
-  border: solid 2px #be7575;
-  padding: 0.1em;
-  display: flex;
-  align-items: center;
-  padding: 0.2em; }
-  .magasin .basket-svg {
-    margin: 0.3em; }
 
 #bandeau {
   height: 69vh;
@@ -289,7 +304,7 @@ footer {
   height: 5vh;
   min-height: 43px;
   width: 100%;
-  background-color: #58b368;
+  background-color: #0b7240;
   position: fixed;
   left: 0;
   bottom: 0;
