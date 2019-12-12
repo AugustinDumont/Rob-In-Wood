@@ -50,28 +50,17 @@
     }
   }
 
-  // document.getElementById("icone-telephone").addEventListener("click", () => {
-  //   document.getElementById("telephone").classList.remove("d-none");
-  // });
-
   $(document).ready(function() {
     $(".owl-carousel").owlCarousel();
   });
 
   $(".owl-carousel").owlCarousel({
-    loop: true,
-    margin: 10,
+    items: 3,
+    margin: 15,
+    // autoplay: true,
+    autoplayTimeout: 10000,
     nav: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 3
-      },
-      1000: {
-        items: 5
-      }
-    }
+    dots: true,
+    loop: true
   });
 })();
