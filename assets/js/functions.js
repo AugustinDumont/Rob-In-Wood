@@ -55,12 +55,11 @@
   });
 
   $(".owl-carousel").owlCarousel({
-    items: 3,
-    margin: 15,
+    items: 1,
     // autoplay: true,
     autoplayTimeout: 10000,
-    nav: true,
-    dots: true,
-    loop: true
+    loop: true,
+    lazyLoad: true,
+    stagePadding: 320
   });
 })();

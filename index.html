@@ -38,36 +38,30 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link hover-shadow" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item">
               <a class="nav-link hover-shadow" href="#">Menuiserie</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link hover-shadow" href="#">Charpente</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link hover-shadow" href="#">Constructions</a>
+              <a class="nav-link hover-shadow" href="#">Construction</a>
             </li>
             <li class="nav-item">
               <a class="nav-link hover-shadow" href="#">Elagage & Abattage</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle hover-shadow" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Magasin
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Tables</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Décoration</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Cadeaux</a>
-              </div>
-            </li>
             <li class="nav-item">
               <a class="nav-link hover-shadow" href="#">Contact</a>
             </li>
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle hover-shadow" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     <img class ="logo-magasin" src="./assets/imgs/svg/305728.svg"/>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Tables</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Décoration</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Cadeaux</a>
+                    </div>
+                  </li>
           </ul>
         </div>
       </div>
@@ -132,26 +126,29 @@
     </section>
       
     <section class ="carousel">
-        <div class="row d-flex justify-content-center">
-            <div class ="col-10 " >
-                <div class="owl-carousel first-carousel">
-                    <div class="item">
-                        <img src="./assets/imgs/firstCarousel/carre1.jpg" />
-                    </div>
-                    <div class="item">
-                        <img src="./assets/imgs/firstCarousel/carre2.jpg" />
-                    </div>
-                    <div class="item">
-                        <img src="./assets/imgs/firstCarousel/carre3.jpg" />
-                    </div>
-                    <div class="item">
-                        <img src="./assets/imgs/firstCarousel/carre4.jpg" />
-                    </div>
-                    <div class="item">
-                        <img src="./assets/imgs/firstCarousel/carre5.jpg" />
-                    </div>
-                    <div class="item">
-                        <img src="./assets/imgs/firstCarousel/carre6.jpg" />
+        <div class="container-fluid">
+            <h2>Galerie</h2>
+            <div class="row d-flex justify-content-center">
+                <div class ="col-12 " >
+                    <div class="owl-carousel first-carousel">
+                        <div class="item">
+                            <img src="./assets/imgs/firstCarousel/carousel-abattage-redi.jpg" />
+                        </div>
+                        <div class="item">
+                            <img src="./assets/imgs/firstCarousel/carousel-menuiserie-redi.jpg" />
+                        </div>
+                        <div class="item">
+                            <img src="./assets/imgs/firstCarousel/carousel-construction-redi.jpg" />
+                        </div>
+                        <div class="item">
+                            <img src="./assets/imgs/firstCarousel/carousel-cabane-redi.jpg" />
+                        </div>
+                        <div class="item">
+                            <img src="./assets/imgs/firstCarousel/carousel-portal-redi.jpg" />
+                        </div>
+                        <div class="item">
+                            <img src="./assets/imgs/firstCarousel/carousel-scierie-redi.jpg" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -160,9 +157,65 @@
         <!-- <div class="cycle-logo"></div> -->
       </section>
 
-      <section class="formulaire"></section>
+    <section class="formulaire">
+        <div class="container">
+            <h2>Contact</h2>
+          <form action="/ma-page-de-traitement" method="post">
+                <div class="form-group">
+                    <label for="name">Nom :</label>
+                    <input type="text" class="form-control"  id="name" name="user_name">
+                </div>
+                <div class="form-group">
+                    <label for="name">Téléphone :</label>
+                    <input type="text" class="form-control"  id="tel" name="user_tel">
+                </div>
+                <div class="form-group">
+                    <label for="mail">E-mail :</label>
+                    <input type="email" class="form-control"  id="mail" name="user_mail">
+                 </div>
+                 <div class="form-group">
+                    <label for="msg">Message :</label>
+                    <textarea class="form-control" id="msg" name="user_message" rows="5"></textarea>
+                </div>
+                <div class="button">
+                    <button class="form-control" type="submit">Envoyer</button>
+                </div>
+            </form>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+        <img class="arbre1" src ="assets/imgs/svg/2028214-508c70.svg"/>
+        <img class="arbre2" src ="assets/imgs/svg/2026390-508c70.svg"/>
+        <img class="arbre3" src ="assets/imgs/svg/1837463-508c70.svg"/>
+        <img class="arbre4" src ="assets/imgs/svg/1295437-508c70.svg"/>
+        <img class="arbre5" src ="assets/imgs/svg/1295437-508c70.svg"/>
+        <img class="arbre6" src ="assets/imgs/svg/1295437-508c70.svg"/>
+        <img class="arbre7" src ="assets/imgs/svg/1295437-508c70.svg"/>
+        <img class="arbre8" src ="assets/imgs/svg/2026390-508c70.svg"/>
+        <img class="arbre9" src ="assets/imgs/svg/2026390-508c70.svg"/>
+        <img class="arbre10" src ="assets/imgs/svg/1295437-508c70.svg"/>
+        <img class="arbre11" src ="assets/imgs/svg/1295437-508c70.svg"/>
+        <img class="arbre12" src ="assets/imgs/svg/1295437-508c70.svg"/>
+        <img class="arbre13" src ="assets/imgs/svg/1837463-508c70.svg"/>
+        <img class="arbre14" src ="assets/imgs/svg/1295437-508c70.svg"/>
+        <img class="arbre15" src ="assets/imgs/svg/1295437-508c70.svg"/>
+        <img class="arbre16" src ="assets/imgs/svg/1295437-508c70.svg"/>
+        <img class="arbre17" src ="assets/imgs/svg/1295437-508c70.svg"/>
+        <img class="arbre18" src ="assets/imgs/svg/1295437-508c70.svg"/>
+        <img class="arbre19" src ="assets/imgs/svg/1295437-508c70.svg"/>
+        <img class="arbre20" src ="assets/imgs/svg/1295437-508c70.svg"/>
+        <img class="arbre24" src ="assets/imgs/svg/310072-508c70.svg"/>
+        <img class="arbre21" src ="assets/imgs/svg/1295437-508c70.svg"/>
+        <img class="arbre22" src ="assets/imgs/svg/303395-508c70.svg"/>
+        <img class="arbre23" src ="assets/imgs/svg/310072-508c70.svg"/>
+       <a href=""><img class="icon-facebook" src ="assets/imgs/svg/2440266-ffffff.svg"/></a> 
+       <a href=""><img class="icon-tel" src ="assets/imgs/svg/1844470.svg"/></a> 
+       <a href=""><img class="icon-instagram" src ="assets/imgs/svg/1834010.svg"/></a> 
+        
+        
+        
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="assets/js/jquery.min.js"></script>

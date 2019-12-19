@@ -1,17 +1,33 @@
-.first-carousel {
-  .owl-item {
-    height: 100%;
-    width: 100%;
-    margin-right: 0;
-    .item {
-      height: 100%;
-      width: 100%;
+.carousel {
+  h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 5em;
+    letter-spacing: 10px;
+    text-align: center;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.15);
+  }
+  margin-bottom: 100px;
+  .first-carousel {
+    .owl-item {
       opacity: 1;
-      margin: 0 20px;
-      img {
-        height: 100%;
-        width: 100%;
+      transform: scale(0.8);
+      transition: all 500ms ease-in-out;
+      filter: grayscale(50%);
+      .item {
+        margin: 0 20px;
+        img {
+          height: auto;
+          max-width: 100%;
+          border-radius: 1%;
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+        }
       }
+    }
+    .owl-item.active {
+      transform: scale(0.9);
+      filter: grayscale(0%);
+      opacity: 1;
     }
   }
 }
