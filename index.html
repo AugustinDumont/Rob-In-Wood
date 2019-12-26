@@ -12,14 +12,16 @@
     />
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/js/owl.carousel.min.css" />
-    <link rel="stylesheet" href="assets/js/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/fullpage.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 
-    <title>Rob'in Wood</title>
+    <!-- <title>Rob'in Wood</title> -->
   </head>
 
   <body>
+
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">
@@ -68,27 +70,89 @@
     </nav>
 
     <!------------------------------------------------------------------------------------------>
-    <header></header>
-    <main>
-      <section class="introduction">
+
+    <!-- Header -->
+    <main id ="fullpage">
+
+    <header class="section header">
         <div class="logo-white">
-          <img src="assets/imgs/logo.png" />
+            <img src="assets/imgs/logo.png" />
         </div>
-        <div class="container">
+        <div class="scroll-btn">
+            <div class="mouse">
+                <div class="cursor"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+
+      <section class="section introduction">
+      <div class="section-border">
+        <div class="section-logo">
+            <a href="#">
+              <img src="assets/imgs/LOGOTYPE-grand.png" alt="logo-robinwood" />
+            </a>
+        </div>
+
+        <div class="container-fluid">
           <div class="row">
-            <div class="col-9">
-              <h2>Rob'in Wood vous souhaite la bienvenue !</h2>
+          <div class="col-lg-6">
+            <div class="text-wrapper">
+              <h2>Bienvenue!</h2>
+              <div class="line"></div>
               <p>
-                Moi c’est Robin, véritable amoureux des arbres et des forêts.<br /><br />
+              Moi c’est Robin, véritable amoureux des arbres et des forêts.<br /><br />
                 <span class="bolder">Menuisier</span> de formation, je travaille le <span class="bolder">bois</span> depuis de nombreuses années. J’ai également réalisé une formation en tant que
                 <span class="bolder">grimpeur–élagueur</span>.<br />
                 De l’esthétique de la construction à l’odeur du sapin, des techniques de grimpe au goût du vertige, attentif aux <span class="bolder">choix des matériaux</span> et au
                 <span class="bolder">respect de la nature</span>, je suis véritable passionné. <br /><br />
                 Je vous invite à découvrir la <span class="bolder"> variété des services </span> que je propose :
               </p>
-              <div class="links"><a>Menuiserie</a><a>Charpente</a><a>Constructions &nbsp; perchées</a><a>Élagage &nbsp; et &nbsp; Abattage</a></div>
-            </div>
+              <div class="links">
+                <div class="link-wrapper">
+                  <div class="link-title">Menuiserie</div>
+                  <div class="link-description">
+                    Lorem ipsum dolor<br>
+                    amet consectetur<br>
+                    adipisicing
+                  </div>
+                </div>
+                <div class="link-wrapper">
+                  <div class="link-title">Charpente</div>
+                  <div class="link-description">
+                    Lorem ipsum dolor<br>
+                    amet consectetur<br>
+                    adipisicing
+                  </div>
+                </div>
+                <div class="link-wrapper">
+                  <div class="link-title">Treehouses</div>
+                  <div class="link-description">
+                    Lorem ipsum dolor<br>
+                    amet consectetur<br>
+                    adipisicing
+                  </div>
+                </div>
+                <div class="link-wrapper">
+                  <div class="link-title">Élagage</div>
+                  <div class="link-description">
+                    Lorem ipsum dolor<br>
+                    amet consectetur<br>
+                    adipisicing
+                  </div>
+                
+                </div>
+              </div>
           </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="picture-wrapper">
+              <!-- <img src="assets/imgs/firstCarousel/carousel-menuiserie-redi.jpg"/> -->
+              <div class="picture"></div>
+          </div>
+          </div>
+        </div>
         </div>
       </section>
 <!-- 
@@ -98,7 +162,7 @@
 
     </section> -->
 
-    <section class="magasin">
+    <section class="section magasin">
         <div class="container-fluid">
             <div class="row no-gutters">
                 <div class="col-6 green-container">
@@ -125,7 +189,7 @@
         </div>
     </section>
       
-    <section class ="carousel">
+    <section class ="section carousel">
         <div class="container-fluid">
             <h2>Galerie</h2>
             <div class="row d-flex justify-content-center">
@@ -157,7 +221,7 @@
         <!-- <div class="cycle-logo"></div> -->
       </section>
 
-    <section class="formulaire">
+    <section class="section formulaire">
         <div class="container">
             <h2>Contact</h2>
           <form action="/ma-page-de-traitement" method="post">
@@ -183,7 +247,11 @@
             </form>
         </div>
       </section>
+
     </main>
+
+    <!-- Footer -->
+
     <footer>
         <img class="arbre1" src ="assets/imgs/svg/2028214-508c70.svg"/>
         <img class="arbre2" src ="assets/imgs/svg/2026390-508c70.svg"/>
@@ -217,9 +285,14 @@
         
     </footer>
 
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/fullpage.min.js"></script>
     <script src="assets/js/functions.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -231,5 +304,6 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+  
   </body>
 </html>
