@@ -62,6 +62,8 @@
   $(document).ready(function() {
     $(".owl-carousel").owlCarousel();
     $("#fullpage").fullpage({
+      anchors: ["home", "introduction", "magasin", "carousel", "formulaire"],
+      navigation: true,
       onLeave: function(origin, destination, direction) {
         console.log("origin: " + origin);
         console.log("destination: " + destination);
@@ -79,11 +81,27 @@
 
   $(".owl-carousel").owlCarousel({
     items: 3,
+    center: true,
     // autoplay: true,
     autoplayTimeout: 10000,
     loop: true,
     lazyLoad: true,
     margin: 15,
-    stagePadding: 0
+    nav: true,
+    navText: ["<img src='assets/imgs/nut.svg' width='50px'>", "<img src='assets/imgs/nut.svg' width='50px'>"]
+  });
+
+  var pictureWrapper = document.querySelector(".picture");
+  document.getElementById("link-wrapper-menuiserie").addEventListener("click", () => {
+    pictureWrapper.style.backgroundImage = 'url("assets/imgs/firstCarousel/carousel-menuiserie-redi.jpg")';
+  });
+  document.getElementById("link-wrapper-charpente").addEventListener("click", () => {
+    pictureWrapper.style.backgroundImage = 'url("assets/imgs/firstCarousel/wrapper-charpente.jpg")';
+  });
+  document.getElementById("link-wrapper-treehouse").addEventListener("click", () => {
+    pictureWrapper.style.backgroundImage = 'url("assets/imgs/firstCarousel/wrapper-treehouse.jpg")';
+  });
+  document.getElementById("link-wrapper-elagage").addEventListener("click", () => {
+    pictureWrapper.style.backgroundImage = 'url("assets/imgs/firstCarousel/wrapper-elagage.jpg")';
   });
 })();

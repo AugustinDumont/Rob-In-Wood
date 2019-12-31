@@ -8,28 +8,42 @@
     text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.15);
   }
   .first-carousel {
+    height: 100%;
     .owl-stage-outer {
-      overflow: initial;
+      height: 100%;
+      .owl-stage {
+        height: 100%;
+        display: flex;
+        align-items: center !important;
+      }
     }
     .owl-item {
-      // opacity: 1;
-      // transform: scale(0.8);
-      // transition: all 500ms ease-in-out;
-      // filter: grayscale(50%);
+      filter: grayscale(50%);
       .item {
-        // margin: 0 20px;
+        margin: 0 20px;
         img {
           height: auto;
           max-width: 100%;
-          // border-radius: 1%;
-          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
         }
       }
     }
-    .owl-item.active {
-      // transform: scale(0.9);
-      // filter: grayscale(0%);
-      // opacity: 1;
+    .owl-item.center {
+      transform: scale(1.2);
+      filter: grayscale(0%);
+    }
+  }
+}
+
+.owl-nav {
+  .owl-prev {
+    span {
+      content: "prev";
+    }
+  }
+
+  .owl-next {
+    span {
+      content: "next";
     }
   }
 }
