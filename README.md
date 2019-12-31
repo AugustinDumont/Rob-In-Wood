@@ -36,4 +36,4 @@ http://www.rob-in-wood.be/
 
 ## Comment
 
-This first web site was a real pleasure to realize. I really liked thinking about desing, web editing and custommer approach and all others aspects. I learn **A LOT** by doing this.
+This first web site was a real pleasure to realize. I really liked thinking about desing, web editing and custommer approach and all others aspects. I have learned **A LOT** by doing this.
