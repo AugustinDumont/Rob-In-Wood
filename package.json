@@ -19,6 +19,7 @@
   "homepage": "https://github.com/AugustinDumont/Rob-In-Wood#readme",
   "dependencies": {
     "fullpage.js": "^2.9.7",
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.0",
+    "popper.js": "^1.16.0"
   }
 }

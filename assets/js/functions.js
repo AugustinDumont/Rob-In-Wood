@@ -92,16 +92,16 @@
   });
 
   var pictureWrapper = document.querySelector(".picture");
-  document.getElementById("link-wrapper-menuiserie").addEventListener("click", () => {
+  document.getElementById("link-wrapper-menuiserie").addEventListener("mouseover", () => {
     pictureWrapper.style.backgroundImage = 'url("assets/imgs/firstCarousel/carousel-menuiserie-redi.jpg")';
   });
-  document.getElementById("link-wrapper-charpente").addEventListener("click", () => {
+  document.getElementById("link-wrapper-charpente").addEventListener("mouseover", () => {
     pictureWrapper.style.backgroundImage = 'url("assets/imgs/firstCarousel/wrapper-charpente.jpg")';
   });
-  document.getElementById("link-wrapper-treehouse").addEventListener("click", () => {
+  document.getElementById("link-wrapper-treehouse").addEventListener("mouseover", () => {
     pictureWrapper.style.backgroundImage = 'url("assets/imgs/firstCarousel/wrapper-treehouse.jpg")';
   });
-  document.getElementById("link-wrapper-elagage").addEventListener("click", () => {
+  document.getElementById("link-wrapper-elagage").addEventListener("mouseover", () => {
     pictureWrapper.style.backgroundImage = 'url("assets/imgs/firstCarousel/wrapper-elagage.jpg")';
   });
 })();
