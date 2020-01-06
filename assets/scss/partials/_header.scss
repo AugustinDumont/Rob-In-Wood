@@ -1,0 +1,102 @@
+/* Menuiserie Rob'in Wood
+ *
+ * 
+ * coded by Augustin Dumont
+ * http://augustindumont.be
+ * 2019
+ */
+
+// HEADER
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../images/background-header.jpg");
+    background-size: 120% auto;
+    background-position-y: 50%;
+    background-position-x: 40%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: background 0.15s ease-in-out;
+
+    .logo-white {
+        text-align: center;
+        z-index: 1;
+
+        img {
+            height: 170px;
+        }
+    }
+
+    .scroll-btn {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 25px;
+        // background-image: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, .45) 100%, white);
+
+        .mouse {
+            cursor: pointer;
+            height: 46px;
+            width: 26px;
+            border-radius: 20px;
+            border: 2px solid rgba(white, 0.25);
+            transition: border 0.5s ease, opacity 0.5s ease;
+            position: relative;
+            opacity: 1;
+
+            &:hover {
+                border-color: rgba(white, 1);
+
+                .cursor {
+                    background-color: rgba(white, 1);
+                }
+            }
+
+            &.hide {
+                opacity: 0;
+            }
+
+            .cursor {
+                animation: cursor 3s ease-in-out infinite;
+                height: 8px;
+                width: 3px;
+                border-radius: 50%;
+                background-color: rgba(white, 0.25);
+                position: absolute;
+                top: 10px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                transition: background 0.5s ease;
+            }
+        }
+    }
+}
+
+/***
+********** Animations
+***/
+
+@keyframes cursor {
+    0% {
+        top: 10px;
+    }
+
+    70% {
+        top: 26px;
+    }
+
+    100% {
+        top: 10px;
+    }
+}

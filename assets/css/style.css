@@ -1,78 +1,29 @@
-.bolder {
-  font-weight: 700; }
+/* Menuiserie Rob'in Wood
+ *
+ * 
+ * coded by Augustin Dumont
+ * http://augustindumont.be
+ * 2019
+ */
+/* Menuiserie Rob'in Wood
+ *
+ * 
+ * coded by Augustin Dumont
+ * http://augustindumont.be
+ * 2019
+ */
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 400ms; }
 
-/* Float */
-.float {
-  display: inline-block;
-  transition-duration: 1000ms;
-  transition-property: transform, filter; }
-  .float:hover {
-    transform: translateY(-5px); }
-
-/* Hover Shadow */
-@keyframes hover {
-  50% {
-    transform: translateY(-3px); }
-  100% {
-    transform: translateY(-6px); } }
-
-@keyframes hover-shadow {
+@keyframes fadeInOpacity {
   0% {
-    transform: translateY(6px);
-    opacity: 0.4; }
-  50% {
-    transform: translateY(3px);
-    opacity: 1; }
+    opacity: 0; }
   100% {
-    transform: translateY(6px);
-    opacity: 0.4; } }
-
-.hover-shadow {
-  display: inline-block;
-  position: relative;
-  transition-duration: 500ms;
-  transition-property: transform; }
-  .hover-shadow:before {
-    pointer-events: none;
-    position: absolute;
-    z-index: -1;
-    content: "";
-    top: 100%;
-    left: 5%;
-    height: 10px;
-    width: 90%;
-    opacity: 0;
-    transition-duration: 500ms;
-    transition-property: transform opacity; }
-  .hover-shadow:hover {
-    transform: translateY(-6px);
-    animation-name: hover;
-    animation-duration: 1.5s;
-    animation-delay: 500ms;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate; }
-    .hover-shadow:hover:before {
-      opacity: 0.4;
-      transform: translateY(6px);
-      animation-name: hover-shadow;
-      animation-duration: 1.5s;
-      animation-delay: 0.3s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-      animation-direction: alternate; }
-
-.effect-box {
-  background-color: white;
-  outline: none;
-  box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
-  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  filter: drop-shadow(2px 2px 2px grey);
-  border: solid 2px #508c70;
-  font-size: 1.5em;
-  transition: transform 500ms ease-in-out; }
-  .effect-box:hover {
-    box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3); }
+    opacity: 1; } }
 
 @font-face {
   font-family: "Open Sans";
@@ -98,294 +49,20 @@
   font-style: "normal";
   src: url("../font/Oswald/Oswald-Light.ttf"); }
 
-#fp-nav {
-  margin-top: 0px !important;
-  right: 36px !important;
-  top: 45% !important;
-  z-index: 9999 !important; }
-  #fp-nav span {
-    background: #508c70 !important; }
-
-.carousel h2 {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 5em;
-  letter-spacing: 10px;
-  text-align: center;
-  text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.15); }
-
-.carousel .first-carousel {
-  height: 100%; }
-  .carousel .first-carousel .owl-stage-outer {
-    height: 100%; }
-    .carousel .first-carousel .owl-stage-outer .owl-stage {
-      height: 100%;
-      display: flex;
-      align-items: center !important; }
-  .carousel .first-carousel .owl-item {
-    filter: grayscale(50%); }
-    .carousel .first-carousel .owl-item .item {
-      margin: 0 20px; }
-      .carousel .first-carousel .owl-item .item img {
-        height: auto;
-        max-width: 100%; }
-  .carousel .first-carousel .owl-item.center {
-    transform: scale(1.2);
-    filter: grayscale(0%); }
-
-.owl-nav .owl-prev span {
-  content: "prev"; }
-
-.owl-nav .owl-next span {
-  content: "next"; }
-
-footer {
-  height: 60px;
-  position: absolute;
-  left: 0;
-  bottom: 100px;
-  right: 0; }
-  footer .wrapper-footer {
-    background-color: #508c70;
-    height: 100%;
-    position: relative; }
-    footer .wrapper-footer .arbre1 {
-      width: 80px;
-      position: absolute;
-      bottom: 60px;
-      left: 0px;
-      transform: scaleX(-1); }
-    footer .wrapper-footer .arbre2 {
-      width: 100px;
-      position: absolute;
-      bottom: 52px;
-      left: 80px; }
-    footer .wrapper-footer .arbre3 {
-      width: 80px;
-      position: absolute;
-      bottom: 58px;
-      left: 179px; }
-    footer .wrapper-footer .arbre4 {
-      width: 52px;
-      position: absolute;
-      bottom: 53px;
-      left: 254px; }
-    footer .wrapper-footer .arbre5 {
-      width: 58px;
-      position: absolute;
-      bottom: 52px;
-      left: 302px; }
-    footer .wrapper-footer .arbre6 {
-      width: 59px;
-      position: absolute;
-      bottom: 52px;
-      left: 354px;
-      transform: scaleX(-1); }
-    footer .wrapper-footer .arbre7 {
-      width: 53px;
-      position: absolute;
-      bottom: 52px;
-      left: 407px; }
-    footer .wrapper-footer .arbre8 {
-      width: 114px;
-      position: absolute;
-      bottom: 50px;
-      left: 457px;
-      transform: scaleX(-1); }
-    footer .wrapper-footer .arbre9 {
-      width: 130px;
-      position: absolute;
-      bottom: 46px;
-      left: 571px; }
-    footer .wrapper-footer .arbre10 {
-      width: 59px;
-      position: absolute;
-      bottom: 49px;
-      left: 676px;
-      transform: scaleX(-1); }
-    footer .wrapper-footer .arbre11 {
-      width: 56px;
-      position: absolute;
-      bottom: 48px;
-      left: 728px; }
-    footer .wrapper-footer .arbre12 {
-      width: 48px;
-      position: absolute;
-      bottom: 50px;
-      left: 781px;
-      transform: scaleX(-1); }
-    footer .wrapper-footer .arbre13 {
-      width: 71px;
-      position: absolute;
-      bottom: 54px;
-      left: 800px;
-      transform: scaleX(-1); }
-    footer .wrapper-footer .arbre14 {
-      width: 36px;
-      position: absolute;
-      bottom: 54px;
-      left: 869px;
-      transform: scaleX(-1); }
-    footer .wrapper-footer .arbre15 {
-      width: 33px;
-      position: absolute;
-      bottom: 54px;
-      left: 903px;
-      transform: scaleX(-1); }
-    footer .wrapper-footer .arbre16 {
-      width: 35px;
-      position: absolute;
-      bottom: 54px;
-      left: 934px;
-      transform: scaleX(-1); }
-    footer .wrapper-footer .arbre17 {
-      width: 63px;
-      position: absolute;
-      bottom: 46px;
-      left: 964px; }
-    footer .wrapper-footer .arbre18 {
-      width: 55px;
-      position: absolute;
-      bottom: 48px;
-      left: 1027px;
-      transform: scaleX(-1); }
-    footer .wrapper-footer .arbre19 {
-      width: 47px;
-      position: absolute;
-      bottom: 52px;
-      left: 1179px;
-      transform: scaleX(-1); }
-    footer .wrapper-footer .arbre20 {
-      width: 48px;
-      position: absolute;
-      bottom: 52px;
-      left: 1223px; }
-    footer .wrapper-footer .arbre21 {
-      width: 50px;
-      position: absolute;
-      bottom: 51px;
-      left: 1268px;
-      transform: scaleX(-1); }
-    footer .wrapper-footer .arbre22 {
-      width: 50px;
-      position: absolute;
-      bottom: 57px;
-      left: 1232px;
-      transform: scaleX(-1); }
-    footer .wrapper-footer .arbre23 {
-      width: 124px;
-      position: absolute;
-      bottom: 46px;
-      left: 1303px; }
-    footer .wrapper-footer .arbre24 {
-      width: 104px;
-      position: absolute;
-      bottom: 46px;
-      left: 1081px; }
-    footer .wrapper-footer .icon-facebook {
-      width: 44px;
-      position: absolute;
-      bottom: 12px;
-      right: 68px;
-      transition: 300ms ease-in; }
-      footer .wrapper-footer .icon-facebook:hover {
-        transform: scale(1.1); }
-    footer .wrapper-footer .icon-tel {
-      width: 65px;
-      position: absolute;
-      bottom: -1px;
-      right: 113px;
-      filter: invert(1);
-      transition: 300ms ease-in; }
-      footer .wrapper-footer .icon-tel:hover {
-        transform: scale(1.1); }
-    footer .wrapper-footer .icon-instagram {
-      width: 54px;
-      position: absolute;
-      bottom: 4px;
-      right: 12px;
-      filter: invert(1);
-      transition: 300ms ease-in; }
-      footer .wrapper-footer .icon-instagram:hover {
-        transform: scale(1.1); }
-
-.formulaire {
-  margin-bottom: 100px;
-  padding-bottom: 100px; }
-  .formulaire h2 {
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 5em;
-    letter-spacing: 10px;
-    text-align: center;
-    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.15); }
-  .formulaire form {
-    width: 50%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-    .formulaire form .form-group {
-      width: 100%; }
-    .formulaire form label {
-      color: #508c70; }
-    .formulaire form button {
-      background-color: #508c70;
-      color: white;
-      transition: 300ms ease-in-out; }
-      .formulaire form button:hover {
-        background-color: #fff;
-        color: #508c70; }
-
-body {
-  background-color: #fff;
-  font-size: 14px;
-  font-family: "Josefin Sans", sans-serif;
-  overflow-x: hidden; }
-
-header {
-  position: relative; }
-
-main {
-  z-index: 2000;
-  position: relative; }
-
-section {
-  position: relative; }
-  section.white {
-    background-color: #fff; }
-
-p a {
-  font-weight: 700; }
-
-.section-border {
-  padding: 100px;
-  height: 100%;
-  width: 100%; }
-  .section-border::after {
-    background: #fff;
-    border: 1px solid #eee;
-    content: "";
-    position: absolute;
-    top: 50px;
-    bottom: 50px;
-    left: 50px;
-    right: 50px; }
-  .section-border > .container-fluid {
-    height: 100%;
-    position: relative;
-    z-index: 1; }
-    .section-border > .container-fluid > .row {
-      height: 100%; }
-
+/* Menuiserie Rob'in Wood
+ *
+ * 
+ * coded by Augustin Dumont
+ * http://augustindumont.be
+ * 2019
+ */
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100%;
-  background-image: url("../imgs/jay-mantri-TFyi0QOx08c-unsplash.jpg");
+  background-image: url("../images/background-header.jpg");
   background-size: 120% auto;
   background-position-y: 50%;
   background-position-x: 40%;
@@ -435,198 +112,9 @@ p a {
         margin: 0 auto;
         transition: background 0.5s ease; }
 
-.introduction {
-  background-color: white;
-  color: rgba(0, 0, 0, 0.75); }
-  .introduction::after {
-    content: "home";
-    position: absolute;
-    top: 45%;
-    left: 37px;
-    right: 37px;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 1.3em;
-    background: white;
-    color: #508c70; }
-  .introduction h2 {
-    color: #333333;
-    font-family: "Oswald";
-    text-transform: uppercase;
-    font-size: 32px;
-    font-weight: 300;
-    margin-bottom: 25px; }
-  .introduction p {
-    color: #333333;
-    font-weight: 400;
-    font-family: "Roboto"; }
-  .introduction .text-wrapper {
-    height: 100%;
-    padding-top: 40px;
-    text-align: left;
-    width: 100%; }
-    .introduction .text-wrapper .line {
-      height: 4px;
-      width: 25px;
-      background-color: #508c70;
-      border-radius: 4px;
-      margin-bottom: 25px;
-      opacity: 0.75; }
-  .introduction .picture-wrapper {
-    height: 100%;
-    padding: 0px 0px 0px 50px; }
-    .introduction .picture-wrapper .picture {
-      height: 100%;
-      width: 100%;
-      background-image: url("../imgs/firstCarousel/carousel-menuiserie-redi.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: 0% 50%; }
-    .introduction .picture-wrapper img {
-      max-width: 100%; }
-  .introduction .links {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end; }
-    .introduction .links .link-wrapper {
-      background: #fff;
-      border: solid 2px #508c70;
-      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-      box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
-      cursor: pointer;
-      padding: 20px;
-      text-align: center;
-      transition: 600ms ease-in-out; }
-      .introduction .links .link-wrapper .link-title {
-        color: #508c70;
-        font-weight: bold; }
-      .introduction .links .link-wrapper .link-description {
-        color: #333333; }
-      .introduction .links .link-wrapper:hover {
-        background: #508c70;
-        background-image: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.45) 100%, white); }
-        .introduction .links .link-wrapper:hover .link-title {
-          color: white;
-          opacity: 1; }
-        .introduction .links .link-wrapper:hover .link-description {
-          color: white;
-          opacity: 0.8; }
-
-.wood {
-  background-image: url("../imgs/wood.jpg");
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  position: relative; }
-  .wood::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.35);
-    top: 0;
-    right: 0;
-    left: 0; }
-  .wood::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    background-image: url("../imgs/black-twill");
-    top: 0;
-    right: 0;
-    left: 0; }
-
-.magasin {
-  background: linear-gradient(to right, #508c70 20%, #eee 50%);
-  margin-bottom: 100px;
-  position: relative; }
-  .magasin::after {
-    content: "cycle";
-    position: absolute;
-    top: 45%;
-    left: 37px;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 1.3em;
-    background: white;
-    color: #508c70;
-    padding: 10px 0; }
-  .magasin .section-border::after {
-    border: none; }
-  .magasin .img-magasin {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: relative;
-    z-index: 1; }
-    .magasin .img-magasin img.cycle-logo {
-      width: auto;
-      height: 100%;
-      animation: rotation 200s infinite linear; }
-  .magasin .container-fluid {
-    padding-left: 0;
-    padding-right: 0; }
-  .magasin .cycle-container {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: 100%; }
-    .magasin .cycle-container .text-wrapper {
-      color: #333333;
-      font-weight: 600; }
-      .magasin .cycle-container .text-wrapper h1 {
-        font-family: "Amatic SC", cursive;
-        font-weight: 700;
-        margin-bottom: 1.5rem;
-        letter-spacing: 5px;
-        line-height: 1.2; }
-      .magasin .cycle-container .text-wrapper p {
-        font-weight: 400; }
-      .magasin .cycle-container .text-wrapper a {
-        font-weight: 700;
-        color: #333333; }
-      .magasin .cycle-container .text-wrapper .link-svg {
-        font-family: "Amatic SC", cursive;
-        display: flex;
-        align-items: center; }
-        .magasin .cycle-container .text-wrapper .link-svg a {
-          display: inline-block;
-          text-decoration: none;
-          color: #333333;
-          font-size: 1.7em;
-          font-weight: 800;
-          letter-spacing: 0.6px; }
-          .magasin .cycle-container .text-wrapper .link-svg a::after {
-            content: "";
-            display: block;
-            width: 0;
-            margin-top: 3px;
-            height: 3px;
-            background: #333333;
-            transition: width 0.5s, background 0.5s; }
-          .magasin .cycle-container .text-wrapper .link-svg a:hover::after {
-            width: 100%;
-            background: #333333;
-            transition: width 0.5s; }
-        .magasin .cycle-container .text-wrapper .link-svg img {
-          width: 30px;
-          margin-left: 50px;
-          margin-bottom: 10px;
-          filter: invert(1); }
-
-@keyframes rotation {
-  from {
-    -webkit-transform: rotate(0deg); }
-  to {
-    -webkit-transform: rotate(359deg); } }
-
+/***
+********** Animations
+***/
 @keyframes cursor {
   0% {
     top: 10px; }
@@ -634,3 +122,362 @@ p a {
     top: 26px; }
   100% {
     top: 10px; } }
+
+/* Menuiserie Rob'in Wood
+ *
+ * 
+ * coded by Augustin Dumont
+ * http://augustindumont.be
+ * 2019
+ */
+.introduction {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.75); }
+  .introduction .section-border::after {
+    background-image: url(../images/backgrounds/background-sapin-3plans.svg);
+    background-position: 50% 0%;
+    background-size: cover; }
+  .introduction::after {
+    content: "home";
+    position: absolute;
+    top: 50%;
+    left: 37px;
+    margin-top: -50px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.3em;
+    color: #508c70; }
+  .introduction .text-wrapper {
+    height: 100%;
+    padding-top: 40px;
+    text-align: left;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%; }
+  .introduction .picture-wrapper {
+    height: 100%;
+    position: relative;
+    border-radius: 1%; }
+    .introduction .picture-wrapper .picture {
+      height: 100%;
+      width: 100%;
+      background-image: url("../images/galerie/introduction/introduction-menuiserie.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      opacity: 1;
+      transition: all 500ms ease-out;
+      border-radius: 1%; }
+    .introduction .picture-wrapper .content-picture {
+      padding: 40px 50px 50px 50px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: scaleY(0);
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      transition: transform 500ms ease; }
+      .introduction .picture-wrapper .content-picture h2,
+      .introduction .picture-wrapper .content-picture p {
+        color: #fff; }
+  .introduction .links {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+    .introduction .links .link-wrapper {
+      background: #fff;
+      border: solid 2px white;
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+      box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+      padding: 15px;
+      text-align: center; }
+      .introduction .links .link-wrapper .link-title {
+        color: #508c70;
+        font-weight: bold; }
+      .introduction .links .link-wrapper .link-description {
+        color: #333333;
+        font-size: 12px; }
+      .introduction .links .link-wrapper:hover {
+        border: solid 2px #508c70; }
+
+/* Menuiserie Rob'in Wood
+ *
+ * 
+ * coded by Augustin Dumont
+ * http://augustindumont.be
+ * 2019
+ */
+.store {
+  margin-bottom: 100px;
+  position: relative; }
+  .store .section-border::after {
+    background-image: url(../images/backgrounds/background-sapin.svg);
+    background-position: 50% 0%; }
+  .store::after {
+    content: "atelier";
+    position: absolute;
+    top: 50%;
+    left: 37px;
+    margin-top: -97px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.3em;
+    color: #508c70;
+    padding: 10px 0; }
+  .store .wrapper-cycle {
+    height: 100%;
+    width: 100%; }
+    .store .wrapper-cycle .text-wrapper-cycle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      width: auto; }
+  .store .logo-cycle {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end; }
+    .store .logo-cycle img {
+      height: 100%;
+      width: auto; }
+
+.first-carousel {
+  height: 100%; }
+  .first-carousel .owl-stage-outer {
+    height: 100%; }
+    .first-carousel .owl-stage-outer .owl-stage {
+      height: 100%;
+      display: flex;
+      align-items: center !important;
+      justify-content: center !important; }
+      .first-carousel .owl-stage-outer .owl-stage .owl-item > .item {
+        cursor: pointer;
+        margin: 6% 8%;
+        transition: margin 0.6s ease; }
+      .first-carousel .owl-stage-outer .owl-stage .owl-item.center > .item {
+        cursor: auto;
+        margin: 0; }
+      .first-carousel .owl-stage-outer .owl-stage .owl-item:not(.center) > div:hover {
+        opacity: 0.75; }
+
+/***
+**********Animations
+***/
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(359deg); } }
+
+/* Menuiserie Rob'in Wood
+ *
+ * 
+ * coded by Augustin Dumont
+ * http://augustindumont.be
+ * 2019
+ */
+.gallery {
+  position: relative; }
+  .gallery .section-border::after {
+    background-image: url(../images/backgrounds/background-sapin.svg); }
+  .gallery::after {
+    content: "galerie";
+    position: absolute;
+    top: 50%;
+    left: 37px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.3em;
+    color: #508c70;
+    padding: 20px 0;
+    margin-top: -100px; }
+  .gallery .section-border,
+  .gallery .section-border > .container-fluid {
+    overflow-x: scroll; }
+  .gallery .all-items-galery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%; }
+    .gallery .all-items-galery .item-galery {
+      overflow: hidden;
+      width: 185px;
+      height: 144px;
+      padding: 10px; }
+      .gallery .all-items-galery .item-galery img {
+        transition: 600ms;
+        height: 100%;
+        width: 100%; }
+        .gallery .all-items-galery .item-galery img:hover {
+          transform: scale(1.1); }
+
+/***
+************Scroll bar gallery
+***/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
+  border-radius: 15px; }
+
+::-webkit-scrollbar {
+  height: 0px;
+  width: 7px;
+  background-color: #f5f5f5; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, 40% 0%, 75% 84%, from(#508c70), to(#97c4b0)); }
+
+/* Menuiserie Rob'in Wood
+ *
+ * 
+ * coded by Augustin Dumont
+ * http://augustindumont.be
+ * 2019
+ */
+.contact {
+  margin-bottom: 100px; }
+  .contact .section-border::after {
+    background-image: url(../images/backgrounds/background-sapin-photo.jpg);
+    background-position: 50% 50%; }
+  .contact::after {
+    content: "contact";
+    position: absolute;
+    top: 50%;
+    left: 37px;
+    margin-top: -97px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.3em;
+    color: #508c70;
+    padding: 10px 0; }
+  .contact .main-form-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .contact .main-form-text .form-text-wrapper img {
+      padding-top: 30px;
+      width: 150px; }
+  .contact .main-form {
+    width: 100%;
+    height: 100%;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; }
+    .contact .main-form form {
+      width: 70%; }
+      .contact .main-form form .form-group {
+        width: 100%; }
+        .contact .main-form form .form-group .form-control {
+          opacity: 0.8;
+          font-size: 12px; }
+          .contact .main-form form .form-group .form-control:focus {
+            border: 1px outset #eeeeee;
+            box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+            opacity: 1; }
+      .contact .main-form form label {
+        color: #508c70; }
+      .contact .main-form form button {
+        width: 150px;
+        margin: auto;
+        background-color: #508c70;
+        color: white;
+        transition: 300ms ease-in-out;
+        opacity: 0.9; }
+        .contact .main-form form button:hover {
+          opacity: 1; }
+
+/***
+.......Navbar
+***/
+#fp-nav {
+  margin-top: 0px !important;
+  right: 36px !important;
+  top: 50% !important;
+  margin-top: -53px !important;
+  z-index: 9999 !important; }
+  #fp-nav span {
+    background: #508c70 !important; }
+
+/***
+.......Main styles
+***/
+body {
+  background-color: #fff;
+  font-size: 14px;
+  font-family: "Josefin Sans", sans-serif;
+  overflow-x: hidden; }
+
+header {
+  position: relative; }
+
+main {
+  z-index: 2000;
+  position: relative; }
+
+h2 {
+  color: #333333;
+  font-family: "Oswald";
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 25px; }
+
+p {
+  color: #333333;
+  font-weight: 400;
+  font-family: "Roboto"; }
+
+/***
+.......Main classes
+***/
+.section-border {
+  padding: 100px;
+  height: 100%;
+  width: 100%; }
+  .section-border::after {
+    background: #fff;
+    border: 1px solid #eee;
+    content: "";
+    position: absolute;
+    top: 50px;
+    bottom: 50px;
+    left: 50px;
+    right: 50px; }
+  .section-border .line {
+    height: 4px;
+    width: 25px;
+    background-color: #508c70;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    opacity: 0.75; }
+  .section-border > .container-fluid {
+    height: 100%;
+    position: relative;
+    z-index: 1; }
+    .section-border > .container-fluid > .row {
+      height: 100%; }

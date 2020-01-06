@@ -1,9 +1,45 @@
+/* Menuiserie Rob'in Wood
+ *
+ * 
+ * coded by Augustin Dumont
+ * http://augustindumont.be
+ * 2019
+ */
+
 @import "./shared";
 @import "./partials/fonts";
-@import "./partials/navbar";
-@import "./partials/carousels";
+@import "./partials/header";
+@import "./partials/introduction";
+@import "./partials/store";
+@import "./partials/gallery";
+@import "./partials/contact";
 @import "./partials/footer";
-@import "./partials/form";
+
+
+
+
+/***
+.......Navbar
+***/
+
+#fp-nav {
+  margin-top: 0px !important;
+  right: 36px !important;
+  top: 50% !important;
+  margin-top: -53px !important;
+  z-index: 9999 !important;
+
+  span {
+    background: $green_flash_color !important;
+  }
+}
+
+
+
+
+/***
+.......Main styles
+***/
 
 body {
   background-color: #fff;
@@ -17,25 +53,32 @@ header {
 }
 
 main {
-  // margin-top: -180px;
   z-index: 2000;
   position: relative;
 }
 
-section {
-  position: relative;
-  &.white {
-    background-color: #fff;
-  }
+h2 {
+  color: $dark;
+  font-family: "Oswald";
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 25px;
 }
 
 p {
-  a {
-    font-weight: 700;
-  }
+  color: $dark;
+  font-weight: 400;
+  font-family: "Roboto";
 }
 
-// CLass
+
+
+
+
+/***
+.......Main classes
+***/
 
 .section-border {
   padding: 100px;
@@ -53,406 +96,22 @@ p {
     right: 50px;
   }
 
-  > .container-fluid {
-    height: 100%;
-    position: relative;
-    z-index: 1;
-
-    > .row {
-      height: 100%;
-    }
-  }
-
-  // .section-logo {
-  //   position: absolute;
-  //   background-color: #fff;
-  //   left: 75px;
-  //   top: 50px;
-  //   padding: 0 25px;
-  //   z-index: 1;
-
-  //   img {
-  //     height: 50px;
-  //     width: auto;
-  //     opacity: 0.8;
-  //     transform: translateY(-50%);
-  //   }
-  // }
-}
-
-// Sections
-
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-  background-image: url("../imgs/jay-mantri-TFyi0QOx08c-unsplash.jpg");
-  background-size: 120% auto;
-  background-position-y: 50%;
-  background-position-x: 40%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  transition: background 0.15s ease-in-out;
-
-  // &::after {
-  //   border: 1px solid #eee;
-  //   content: "";
-  //   position: absolute;
-  //   top: 50px;
-  //   bottom: 50px;
-  //   left: 50px;
-  //   right: 50px;
-  // }
-
-  .logo-white {
-    text-align: center;
-    z-index: 1;
-
-    img {
-      height: 170px;
-    }
-  }
-
-  .scroll-btn {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 25px;
-    // height: 100px;
-    // background-image: linear-gradient(to bottom, transparent 0%, rgba(255,255,255,.45) 100%, white);
-
-    .mouse {
-      cursor: pointer;
-      height: 46px;
-      width: 26px;
-      border-radius: 20px;
-      border: 2px solid rgba(white, 0.25);
-      transition: border 0.5s ease, opacity 0.5s ease;
-      position: relative;
-      opacity: 1;
-      // display: flex;
-
-      &:hover {
-        border-color: rgba(white, 1);
-
-        .cursor {
-          background-color: rgba(white, 1);
-        }
-      }
-
-      &.hide {
-        opacity: 0;
-      }
-
-      .cursor {
-        animation: cursor 3s ease-in-out infinite;
-        height: 8px;
-        width: 3px;
-        border-radius: 50%;
-        background-color: rgba(white, 0.25);
-        position: absolute;
-        top: 10px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        transition: background 0.5s ease;
-      }
-    }
-  }
-}
-
-.introduction {
-  background-color: white;
-  color: rgba(#000, 0.75);
-  &::after {
-    content: "home";
-    position: absolute;
-    top: 45%;
-    left: 37px;
-    right: 37px;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 1.3em;
-    background: white;
-    color: $green_flash_color;
-  }
-
-  h2 {
-    color: $dark;
-    font-family: "Oswald";
-    text-transform: uppercase;
-    font-size: 32px;
-    font-weight: 300;
+  .line {
+    height: 4px;
+    width: 25px;
+    background-color: $green_flash_color;
+    border-radius: 4px;
     margin-bottom: 25px;
+    opacity: 0.75;
   }
 
-  p {
-    color: $dark;
-    font-weight: 400;
-    font-family: "Roboto";
-  }
-
-  .text-wrapper {
+  >.container-fluid {
     height: 100%;
-    padding-top: 40px;
-    // border: 2px solid red;
-    text-align: left;
-    width: 100%;
-
-    .line {
-      height: 4px;
-      width: 25px;
-      background-color: $green_flash_color;
-      border-radius: 4px;
-      margin-bottom: 25px;
-      opacity: 0.75;
-    }
-  }
-
-  .picture-wrapper {
-    // border: 2px solid red;
-    height: 100%;
-    padding: 0px 0px 0px 50px;
-    .picture {
-      height: 100%;
-      width: 100%;
-      background-image: url("../imgs/firstCarousel/carousel-menuiserie-redi.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: 0% 50%;
-    }
-
-    img {
-      max-width: 100%;
-    }
-  }
-  .links {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-    .link-wrapper {
-      background: #fff;
-      border: solid 2px $green_flash_color;
-      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-      box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
-
-      cursor: pointer;
-      padding: 20px;
-      text-align: center;
-      transition: 600ms ease-in-out;
-      // &:nth-child(2n) {
-      //   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-      // }
-      .link-title {
-        color: $green_flash_color;
-        font-weight: bold;
-      }
-      .link-description {
-        color: $dark;
-      }
-      &:hover {
-        background: $green_flash_color;
-        background-image: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.45) 100%, white);
-        .link-title {
-          color: white;
-          opacity: 1;
-        }
-        .link-description {
-          color: white;
-          opacity: 0.8;
-        }
-      }
-    }
-  }
-}
-
-.wood {
-  background-image: url("../imgs/wood.jpg");
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.35);
-    top: 0;
-    right: 0;
-    left: 0;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    background-image: url("../imgs/black-twill");
-    top: 0;
-    right: 0;
-    left: 0;
-  }
-}
-
-.magasin {
-  background: linear-gradient(to right, #508c70 20%, #eee 50%);
-  margin-bottom: 100px;
-  position: relative;
-  &::after {
-    content: "cycle";
-    position: absolute;
-    top: 45%;
-    left: 37px;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 1.3em;
-    background: white;
-    color: $green_flash_color;
-    padding: 10px 0;
-  }
-  .section-border::after {
-    border: none;
-  }
-  .img-magasin {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
     position: relative;
     z-index: 1;
 
-    img.cycle-logo {
-      width: auto;
+    >.row {
       height: 100%;
-      animation: rotation 200s infinite linear;
-      // filter: invert(0.7);
-      // filter: drop-shadow(1px 1px 1px grey);
     }
-  }
-
-  .container-fluid {
-    padding-left: 0;
-    padding-right: 0;
-
-    // .row {
-    //   > [class*="col"] {
-    //     &:first-child {
-    //       background-color: $green_flash_color;
-    //       padding-right: 0;
-    //     }
-    //     &:last-child {
-    //       padding-left: 0;
-    //       background-image: url("../imgs/mihai-lazar-8TDltliWdJY-unsplash.jpg");
-    //       background-size: cover;
-    //       &::after {
-    //         content: "";
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //         right: 0;
-    //         bottom: 0;
-    //         background-color: rgba(black, 0.35);
-    //       }
-    //     }
-    //   }
-    // }
-  }
-  .cycle-container {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    .text-wrapper {
-      color: $dark;
-      font-weight: 600;
-
-      h1 {
-        font-family: "Amatic SC", cursive;
-        font-weight: 700;
-        margin-bottom: 1.5rem;
-        letter-spacing: 5px;
-        line-height: 1.2;
-      }
-      p {
-        font-weight: 400;
-      }
-      a {
-        font-weight: 700;
-        color: $dark;
-      }
-
-      .link-svg {
-        font-family: "Amatic SC", cursive;
-        display: flex;
-        align-items: center;
-
-        a {
-          display: inline-block;
-          text-decoration: none;
-          color: $dark;
-          font-size: 1.7em;
-          font-weight: 800;
-          letter-spacing: 0.6px;
-
-          &::after {
-            content: "";
-            display: block;
-            width: 0;
-            margin-top: 3px;
-            height: 3px;
-            background: $dark;
-            transition: width 0.5s, background 0.5s;
-          }
-
-          &:hover {
-            &::after {
-              width: 100%;
-              background: $dark;
-              transition: width 0.5s;
-            }
-          }
-        }
-
-        img {
-          width: 30px;
-          margin-left: 50px;
-          margin-bottom: 10px;
-          filter: invert(1);
-        }
-      }
-    }
-  }
-}
-
-@keyframes rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-  }
-}
-
-@keyframes cursor {
-  0% {
-    top: 10px;
-  }
-  70% {
-    top: 26px;
-  }
-  100% {
-    top: 10px;
   }
 }

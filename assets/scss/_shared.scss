@@ -1,142 +1,35 @@
-$background_base_color: #f2eee5;
-$grey_color: #d7d1c9;
-$green_light_color: #c2e8ce;
+/* Menuiserie Rob'in Wood
+ *
+ * 
+ * coded by Augustin Dumont
+ * http://augustindumont.be
+ * 2019
+ */
+
+
+// Colors
+
 $green_flash_color: #508c70;
-$orange_color: #f6ad7b;
-$brown_light_color: #be7575;
-$brown_dark_color: #443737;
 $dark: #333333;
 
-.bolder {
-  font-weight: 700;
+
+
+// Animations 
+
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 400ms;
 }
 
-/* Float */
-.float {
-  display: inline-block;
-  transition-duration: 1000ms;
-  transition-property: transform, filter;
-
-  &:hover {
-    transform: translateY(-5px);
-  }
-}
-
-/* Hover Shadow */
-@keyframes hover {
-  50% {
-    transform: translateY(-3px);
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
   }
 
   100% {
-    transform: translateY(-6px);
-  }
-}
-
-@keyframes hover-shadow {
-  0% {
-    transform: translateY(6px);
-    opacity: 0.4;
-  }
-
-  50% {
-    transform: translateY(3px);
     opacity: 1;
   }
-
-  100% {
-    transform: translateY(6px);
-    opacity: 0.4;
-  }
 }
-
-.hover-shadow {
-  display: inline-block;
-  position: relative;
-  transition-duration: 500ms;
-  transition-property: transform;
-
-  &:before {
-    pointer-events: none;
-    position: absolute;
-    z-index: -1;
-    content: "";
-    top: 100%;
-    left: 5%;
-    height: 10px;
-    width: 90%;
-    opacity: 0;
-    // background: radial-gradient(ellipse at center, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, 0) 80%);
-    transition-duration: 500ms;
-    transition-property: transform opacity;
-  }
-
-  &:hover {
-    transform: translateY(-6px);
-    animation-name: hover;
-    animation-duration: 1.5s;
-    animation-delay: 500ms;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-
-    &:before {
-      opacity: 0.4;
-      transform: translateY(6px);
-      animation-name: hover-shadow;
-      animation-duration: 1.5s;
-      animation-delay: 0.3s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-    }
-  }
-}
-
-// Effect box
-
-.effect-box {
-  background-color: white;
-  outline: none;
-  box-shadow: 20px 38px 34px -26px hsla(0, 0%, 0%, 0.2);
-  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  filter: drop-shadow(2px 2px 2px grey);
-  border: solid 2px $green_flash_color;
-  font-size: 1.5em;
-  transition: transform 500ms ease-in-out;
-
-  &:hover {
-    box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
-  }
-}
-
-// html {
-//     -webkit-animation: forest-night 10s infinite;
-//     animation: forest-night 10s infinite;
-// }
-
-// @-webkit-keyframes forest-night {
-//     0% {
-//         filter: hue-rotate(0deg) brightness(0%);
-//     }
-
-//     10% {
-//         filter: hue-rotate(0deg) brightness(50%);
-//     }
-
-//     20% {
-//         filter: hue-rotate(0deg) brightness(100%);
-//     }
-
-//     50% {
-//         filter: hue-rotate(0deg) brightness(2);
-//     }
-
-//     70% {
-//         filter: hue-rotate(220deg) brightness(50%);
-//     }
-
-//     100% {
-//         filter: hue-rotate(0deg) brightness(0%);
-//     }
-// }

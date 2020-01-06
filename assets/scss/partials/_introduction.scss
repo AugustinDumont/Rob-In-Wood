@@ -1,0 +1,115 @@
+/* Menuiserie Rob'in Wood
+ *
+ * 
+ * coded by Augustin Dumont
+ * http://augustindumont.be
+ * 2019
+ */
+
+// INTRODUCTION
+
+.introduction {
+    background-color: white;
+    color: rgba(#000, 0.75);
+
+    .section-border {
+        &::after {
+            background-image: url(../images/backgrounds/background-sapin-3plans.svg);
+            background-position: 50% 0%;
+            background-size: cover;
+        }
+    }
+
+    &::after {
+        content: "home";
+        position: absolute;
+        top: 50%;
+        left: 37px;
+        margin-top: -50px;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 1.3em;
+        color: $green_flash_color;
+    }
+
+    .text-wrapper {
+        height: 100%;
+        padding-top: 40px;
+        text-align: left;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
+    .picture-wrapper {
+        height: 100%;
+        position: relative;
+        border-radius: 1%;
+
+        .picture {
+            height: 100%;
+            width: 100%;
+            background-image: url("../images/galerie/introduction/introduction-menuiserie.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            opacity: 1;
+            transition: all 500ms ease-out;
+            border-radius: 1%;
+        }
+
+        .content-picture {
+            padding: 40px 50px 50px 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: scaleY(0);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            transition: transform 500ms ease;
+
+            h2,
+            p {
+                color: #fff;
+            }
+        }
+    }
+
+    .links {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .link-wrapper {
+            background: #fff;
+            border: solid 2px white;
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+            padding: 15px;
+            text-align: center;
+
+            .link-title {
+                color: $green_flash_color;
+                font-weight: bold;
+            }
+
+            .link-description {
+                color: $dark;
+                font-size: 12px;
+            }
+
+            &:hover {
+                border: solid 2px $green_flash_color;
+            }
+        }
+    }
+}

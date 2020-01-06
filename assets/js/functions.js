@@ -1,6 +1,9 @@
 (() => {
   var header = $("header");
   var nav = $("nav");
+
+  // PARALLAX
+
   var windowWidth = $(window).width();
   var windowHeight = $(window).height();
 
@@ -8,66 +11,35 @@
   const intervalY = Math.round(windowHeight / nbPercents);
   const intervalX = Math.round(windowWidth / nbPercents);
 
-  // console.log("ww" + windowWidth);
-  // console.log("wh" + windowHeight);
 
-  $(document).mousemove(function(e) {
+  $(document).mousemove(function (e) {
     mousePosX = e.pageX;
     mousePosY = e.pageY;
     var percentY = 50;
     var percentX = 40;
     var i;
 
-    // console.log("y: " + mousePosY);
-    // console.log("x: " + mousePosX);
-
     for (i = 0; i < nbPercents; i++) {
       if (mousePosY + 1 > i * intervalY && mousePosY < (i + 1) * intervalY) {
         percentY = percentY + i;
-        // console.log("percent" + percentY);
         $(header).css("background-position-y", percentY + "%");
       }
       if (mousePosX + 1 > i * intervalX && mousePosX < (i + 1) * intervalX) {
         percentX = percentX + i;
-        // console.log("percentX" + percentX);
         $(header).css("background-position-x", percentX + "%");
       }
     }
   });
 
-  $(document).on("scroll", function(e) {
-    // console.log("test");
-    scrollFunctionNav();
-  });
 
-  function scrollFunctionNav() {
-    var nav = $("nav");
-    var scrollTop = $(document).scrollTop();
-    console.log(scrollTop);
-    if (scrollTop > 100) {
-      $(nav).addClass("active");
-    } else {
-      $(nav).removeClass("active");
-    }
-  }
+  // ON READY OWL-CAROUSEL + FULLPAGE
 
-  function headerAnimation() {
-    var mouse = $(".header .mouse");
-
-    $(mouse).click(function() {
-      $.fn.fullpage.moveSectionDown();
-    });
-  }
-
-  $(document).ready(function() {
+  $(document).ready(function () {
     $(".owl-carousel").owlCarousel();
     $("#fullpage").fullpage({
-      anchors: ["home", "introduction", "magasin", "carousel", "formulaire"],
+      anchors: ["home", "introduction", "store", "gallery", "contact"],
       navigation: true,
-      onLeave: function(origin, destination, direction) {
-        console.log("origin: " + origin);
-        console.log("destination: " + destination);
-        console.log("direction: " + direction);
+      onLeave: function (origin, destination, direction) {
         if (origin == 1 && destination == 2) {
           $(nav).addClass("active");
         }
@@ -79,8 +51,72 @@
     headerAnimation();
   });
 
+  // HEADER
+
+  function headerAnimation() {
+    var mouse = $(".header .mouse");
+
+    $(mouse).click(function () {
+      $.fn.fullpage.moveSectionDown();
+    });
+  }
+
+  // INTRODUCTION 
+
+  var pictureWrapper = document.querySelector(".picture");
+  var links = document.querySelector(".links");
+  let contentPicture = document.querySelectorAll(".content-picture");
+  var contentPictureMenuiserie = document.querySelector(".content-picture-menuiserie");
+  var contentPictureCharpente = document.querySelector(".content-picture-charpente");
+  var contentPictureTreehouse = document.querySelector(".content-picture-treehouse");
+  var contentPictureElagage = document.querySelector(".content-picture-elagage");
+
+  document.getElementById("link-wrapper-menuiserie").addEventListener("mouseover", () => {
+    pictureWrapper.style.backgroundImage = 'url("assets/images/galerie/introduction/introduction-menuiserie.jpg")';
+    contentPictureMenuiserie.classList.remove("d-none");
+    contentPictureCharpente.classList.add("d-none");
+    contentPictureTreehouse.classList.add("d-none");
+    contentPictureElagage.classList.add("d-none");
+  });
+  document.getElementById("link-wrapper-charpente").addEventListener("mouseover", () => {
+    pictureWrapper.style.backgroundImage = 'url("assets/images/galerie/introduction/introduction-charpente.jpg")';
+    contentPictureCharpente.classList.remove("d-none");
+    contentPictureMenuiserie.classList.add("d-none");
+    contentPictureTreehouse.classList.add("d-none");
+    contentPictureElagage.classList.add("d-none");
+  });
+  document.getElementById("link-wrapper-treehouse").addEventListener("mouseover", () => {
+    pictureWrapper.style.backgroundImage = 'url("assets/images/galerie/introduction/introduction-treehouse.jpg")';
+    contentPictureTreehouse.classList.remove("d-none");
+    contentPictureMenuiserie.classList.add("d-none");
+    contentPictureCharpente.classList.add("d-none");
+    contentPictureElagage.classList.add("d-none");
+  });
+  document.getElementById("link-wrapper-elagage").addEventListener("mouseover", () => {
+    pictureWrapper.style.backgroundImage = 'url("assets/images/galerie/introduction/introduction-elagage.jpg")';
+    contentPictureElagage.classList.remove("d-none");
+    contentPictureMenuiserie.classList.add("d-none");
+    contentPictureCharpente.classList.add("d-none");
+    contentPictureTreehouse.classList.add("d-none");
+  });
+
+  document.querySelector("body").addEventListener("click", e => {
+    if (links.contains(e.target)) {
+      contentPicture.forEach(element => {
+        element.style.transform = "scaleY(1)";
+      });
+    } else {
+      contentPicture.forEach(element => {
+        element.style.transform = "scaleY(0)";
+      });
+    }
+  });
+
+
+  // OWL CAROUSEL 
+
   $(".owl-carousel").owlCarousel({
-    items: 3,
+    items: 1,
     center: true,
     // autoplay: true,
     autoplayTimeout: 10000,
@@ -88,20 +124,6 @@
     lazyLoad: true,
     margin: 15,
     nav: true,
-    navText: ["<img src='assets/imgs/nut.svg' width='50px'>", "<img src='assets/imgs/nut.svg' width='50px'>"]
-  });
-
-  var pictureWrapper = document.querySelector(".picture");
-  document.getElementById("link-wrapper-menuiserie").addEventListener("mouseover", () => {
-    pictureWrapper.style.backgroundImage = 'url("assets/imgs/firstCarousel/carousel-menuiserie-redi.jpg")';
-  });
-  document.getElementById("link-wrapper-charpente").addEventListener("mouseover", () => {
-    pictureWrapper.style.backgroundImage = 'url("assets/imgs/firstCarousel/wrapper-charpente.jpg")';
-  });
-  document.getElementById("link-wrapper-treehouse").addEventListener("mouseover", () => {
-    pictureWrapper.style.backgroundImage = 'url("assets/imgs/firstCarousel/wrapper-treehouse.jpg")';
-  });
-  document.getElementById("link-wrapper-elagage").addEventListener("mouseover", () => {
-    pictureWrapper.style.backgroundImage = 'url("assets/imgs/firstCarousel/wrapper-elagage.jpg")';
+    // navText: 
   });
 })();
