@@ -11,268 +11,183 @@
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="assets/css/lightbox.min.css" />
-    <link rel="stylesheet" href="assets/css/fullpage.min.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <title>Menuiserie Rob'in Wood</title>
+    <!-- <link rel="stylesheet" href="assets/css/fullpage.min.css" /> -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Rob'in Wood - Travaux de menuiserie, charpente, élagage et treehouse</title>
     <link rel="icon" type="image/ico" href="assets/images/logos/nut-transparent.ico" />
 </head>
 
 <body>
 
-    <!-- Header -->
 
-    <main id="fullpage">
-
+    <!-- Main -->
+    <main>
+        <!-- Header -->
         <header class="section header" data-anchor="home">
-            <div class="logo-white">
-                <img src="assets/images/logos/logo.png" />
-            </div>
-            <div class="scroll-btn">
-                <div class="mouse">
-                    <div class="cursor"></div>
+            <div class="header-wrapper">
+                <div class="header-logo">
+                    <img src="assets/images/logos/logo.png" />
+                </div>
+                <div class="header-subtitle">
+                    <h1>Artisan du bois</h1>
+                    <h2>Menuiserie - Charpente - Treehouse - Élagage</h2>
+                </div>
+                <div class="header-icons">
+                    <div class="icon-wrapper">
+                        <i class="icon fab fa-facebook-f"></i>
+                    </div>
+                    <div class="icon-wrapper">
+                        <i class="icon fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="scroll-btn">
+                    <div class="mouse">
+                        <div class="cursor"></div>
+                    </div>
                 </div>
             </div>
         </header>
 
-
-        <!-- Main -->
-
-        <!-- Introduction -->
-
-        <section class="section introduction" data-anchor="introduction">
-            <div class="section-border">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="text-wrapper">
-                                <h2>Bienvenue!</h2>
-                                <div class="line"></div>
-                                <p>
-                                    Moi c’est Robin, véritable amoureux des arbres et des forêts.<br /><br />
-                                    <span class="bolder">Menuisier</span> de formation, je travaille le <span class="bolder">bois</span> depuis de nombreuses années. J’ai également réalisé
-                                    une formation en tant que
-                                    <span class="bolder">grimpeur–élagueur</span>.<br />
-                                    De l’esthétique de la construction à l’odeur du sapin, des techniques de grimpe au
-                                    goût du vertige, attentif aux <span class="bolder">choix des matériaux</span> et au
-                                    <span class="bolder">respect de la nature</span>, je suis véritable passionné.
-                                    <br /><br />
-                                    Je vous invite à découvrir la <span class="bolder"> variété des services </span> que
-                                    je propose :
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="links">
-                                <div class="link-wrapper" id="link-wrapper-menuiserie">
-                                    <div class="link-title">Menuiserie</div>
-                                    <div class="link-description">
-                                        Lorem ipsum dolor<br>
-                                        amet consectetur<br>
-                                        adipisicing
-                                    </div>
-                                </div>
-                                <div class="link-wrapper" id="link-wrapper-charpente">
-                                    <div class="link-title">Charpente</div>
-                                    <div class="link-description">
-                                        Lorem ipsum dolor<br>
-                                        amet consectetur<br>
-                                        adipisicing
-                                    </div>
-                                </div>
-                                <div class="link-wrapper" id="link-wrapper-treehouse">
-                                    <div class="link-title">Treehouse</div>
-                                    <div class="link-description">
-                                        Lorem ipsum dolor<br>
-                                        amet consectetur<br>
-                                        adipisicing
-                                    </div>
-                                </div>
-                                <div class="link-wrapper" id="link-wrapper-elagage">
-                                    <div class="link-title">Élagage</div>
-                                    <div class="link-description">
-                                        Lorem ipsum dolor<br>
-                                        amet consectetur<br>
-                                        adipisicing
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="picture-wrapper">
-                                <div class="picture"></div>
-                                <div class="content-picture content-picture-menuiserie d-none">
-                                    <h2>Menuiserie</h2>
-                                    <div class="line"></div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur maxime
-                                        asperiores ab consequuntur.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium?</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex atque cum nulla!</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium?</p>
-                                    <p>Lorem, ipsum dolor.</p>
-                                </div>
-                                <div class="content-picture content-picture-charpente d-none">
-                                    <h2>Charpente</h2>
-                                    <div class="line"></div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur maxime
-                                        asperiores ab consequuntur.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium?</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex atque cum nulla!</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium?</p>
-                                    <p>Lorem, ipsum dolor.</p>
-                                </div>
-                                <div class="content-picture content-picture-treehouse d-none">
-                                    <h2>Treehouse</h2>
-                                    <div class="line"></div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur maxime
-                                        asperiores ab consequuntur.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium?</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex atque cum nulla!</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium?</p>
-                                    <p>Lorem, ipsum dolor.</p>
-                                </div>
-                                <div class="content-picture content-picture-elagage d-none">
-                                    <h2>Elagage</h2>
-                                    <div class="line"></div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur maxime
-                                        asperiores ab consequuntur.</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium?</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex atque cum nulla!</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium?</p>
-                                    <p>Lorem, ipsum dolor.</p>
-                                </div>
-                            </div>
+        <section class="section about">
+            <div class="container">
+                <div class="row  d-flex justify-content-center">
+                    <div class="col-md-7">
+                        <div class="section-title">
+                            <h2>À propos</h2>
+                            <p>Moi c’est Robin, véritable amoureux des arbres et des forêts.<br>
+                                De l’esthétique de la construction à l’odeur du sapin, des techniques de grimpe au goût du vertige,<br>attentif aux choix des matériaux et au respect de la nature, je suis un véritable passionné.<br>
+                                Je vous invite à découvrir la variété des services que je propose. </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-
-        <!-- Magasin -->
-
-        <section class="section store" data-anchor="store">
-            <div class="section-border">
-                <div class="container-fluid">
+            <div class="about-text">
+                <div class="container">
                     <div class="row">
-                        <div class="col-lg-4">
-                            <div class="wrapper-cycle">
-                                <div class="text-wrapper-cycle">
-                                    <h2>Cycle court</h2>
-                                    <div class="line"></div>
-                                    <p>
-                                        Grâce à mes activités d’<a href="#">abattage</a> dans la province de Namur, je
-                                        récupère des pièces de bois uniques pour la <a href="#">menuiserie</a>.<br />
-                                        Pour de meilleures finitions et un travail sur mesure, je travaille en
-                                        partenariat avec une petite <a href="">scierie locale</a>. <br /><br />
-                                        Laissez place à votre créativité, je vous offre mon expertise. <br /><br />
-                                    </p>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita doloribus
-                                        officiis doloremque!</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                                </div>
+                        <div class="col-md-2">
+                            <div class="picture-wrapper left">
+                                <img src="assets/images/galerie/trees-from-top/trees-from-top1.jpg" />
                             </div>
                         </div>
-                        <!-- <div class="col-lg-4">
-                            <div class="logo-cycle">
-                                <img src="assets/images/LOGO.svg">
+                        <div class="col-md-4">
+                            <h3>Menuiserie</h3>
+                            <p>
+                                <span class="bolder"> La menuiserie</span>, c’est le point de départ de mon parcours,
+                                mes premières rencontres avec <span class="bolder">les arbres</span>, mes premiers contacts avec <span class="bolder">le bois</span>.
+                                J’aime préserver les courbes naturelles du bois et le laisser dans son aspect brut.<br><br>
+                                <!-- <span class="hashtag"># Passion &nbsp; # Précision &nbsp; # Nature</span> -->
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <h3>Charpente</h3>
+                            <p>
+                                Que ce soit pour <span class="bolder">les toitures ou les ossatures</span>, la charpenterie demande énormément de technique et de précision.
+                                L’assemblage des différents composants doit se faire avec soin pour assurer <span class="bolder">un soutien optimal et une esthétique de qualité</span>.<br><br>
+                                <!-- <span class="hashtag"># Solidité &nbsp; # Adaptabilité &nbsp; # Qualité</span> -->
+                            </p>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="picture-wrapper right">
+                                <img src="assets/images/galerie/trees-from-top/trees-from-top2.jpg" />
                             </div>
-                        </div> -->
-                        <!-- <div class="col-lg-4">
-                            <div class="owl-carousel first-carousel">
-                                <div class="item">
-                                    <img src="./assets/images/firstCarousel/carousel-abattage-redi.jpg" />
-                                </div>
-                                <div class="item">
-                                    <img src="./assets/images/firstCarousel/carousel-menuiserie-redi.jpg" />
-                                </div>
-                                <div class="item">
-                                    <img src="./assets/images/firstCarousel/carousel-construction-redi.jpg" />
-                                </div>
-                                <div class="item">
-                                    <img src="./assets/images/firstCarousel/carousel-cabane-redi.jpg" />
-                                </div>
-                                <div class="item">
-                                    <img src="./assets/images/firstCarousel/carousel-portal-redi.jpg" />
-                                </div>
-                                <div class="item">
-                                    <img src="./assets/images/firstCarousel/carousel-scierie-redi.jpg" />
-                                </div>
-                            </div>
-                        </div> -->
+                        </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="picture-wrapper left">
+                                <img src="assets/images/galerie/trees-from-top/trees-from-top3.jpg" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h3>Treehouse</h3>
+                            <p>
+                                <span class="bolder">Treehouse</span> (maison dans les arbres), représente une construction au sein d’un ou de plusieurs arbres.
+                                C’est <span class="bolder">l’union</span> entre <span class="bolder">l'arbre vivant</span> et le matériaux qu’il génère, <span class="bolder">le bois</span>.
+                                Dans le respect de l’arbre, il faut savoir surmonter les contraintes du terrain et adapter sa technique.<br><br>
+                                <!-- <span class="hashtag"># Esthétique &nbsp; # Évasion &nbsp; # Création</span> -->
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <h3>Élagage</h3>
+                            <p>
+                                <span class="bolder">L’élagage et l’abattage</span> sont des activités qui demandent énormément <span class="bolder">d’efforts, de techniques et d’attention</span>.
+                                En haut de l’arbre, je profite de la vue, mais reste dans le moment présent, concentré à 100 %.<br><br><br>
+                                <!-- <span class="hashtag"># Sécurité &nbsp; # Concentration &nbsp; # Technique</span> -->
+                            </p>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="picture-wrapper right">
+                                <img src="assets/images/galerie/trees-from-top/trees-from-top4.jpg" />
+                            </div>
+                        </div>
+                        <button>Galerie photo</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </section>
+        <!-- 
+        <section class="section cycle"></section> -->
+
+
+        <section class="section shop" style="background-image:url('./assets/images/backgrounds/background-shop.jpg')">
+            <div class="shop-black-filter">
+                <div class="container">
+                    <div class="row">
+                        <div class="shop-logo">
+                            <img src="assets/images/logos/LOGO.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="owl-carousel first-carousel">
+                <a data-toggle="modal" data-target="#exampleModalCenter">
+                    <div class="item-wrapper">
+                        <div class="item" style="background-image:url('./assets/images/galerie/introduction/menuiserie.jpg');" data-lightbox="mygallery" data-title="Treehouse"></div>
+                    </div>
+                </a>
+                <div class="item-wrapper">
+                    <div class="item" style="background-image:url('./assets/images/galerie/introduction/charpente.jpg');"></div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item" style="background-image:url('./assets/images/galerie/introduction/treehouse.jpg');"></div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item" style="background-image:url('./assets/images/galerie/introduction/bardage.jpg');"></div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item" style="background-image:url('./assets/images/galerie/introduction/table.jpg');"></div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item" style="background-image:url('./assets/images/galerie/introduction/abattage.jpg');"></div>
+                </div>
+                <div class="item-wrapper">
+                    <div class="item" style="background-image:url('./assets/images/galerie/introduction/elagage.jpg');"></div>
                 </div>
             </div>
         </section>
 
-        <!-- Galerie -->
+    </main>
 
-        <section class="section gallery" data-anchor="gallery">
-            <div class="section-border">
-                <div class="container-fluid">
+    <!-- Modal Gallery-->
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
                     <div class="all-items-galery">
-                        <!--Treehouses pictures-->
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/treehouse/grand/treehouse1-grand.jpg" data-lightbox="mygallery" data-title="Treehouse">
-                                <img src="assets/images/galerie/treehouse/petit/treehouse1-petit.jpg" />
-                            </a>
-                        </div>
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/treehouse/grand/treehouse2-grand.jpg" data-lightbox="mygallery" data-title="Treehouse">
-                                <img src="assets/images/galerie/treehouse/petit/treehouse2-petit.jpg" />
-                            </a>
-                        </div>
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/treehouse/grand/treehouse3-grand.jpg" data-lightbox="mygallery" data-title="Cabane et décorations">
-                                <img src="assets/images/galerie/treehouse/petit/treehouse3-petit.jpg" />
-                            </a>
-                        </div>
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/treehouse/grand/treehouse4-grand.jpg" data-lightbox="mygallery" data-title="Structure atour d'un arbre">
-                                <img src="assets/images/galerie/treehouse/petit/treehouse4-petit.jpg" />
-                            </a>
-                        </div>
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/treehouse/grand/treehouse5-grand.jpg" data-lightbox="mygallery" data-title="Barrières cabane">
-                                <img src="assets/images/galerie/treehouse/petit/treehouse5-petit.jpg" />
-                            </a>
-                        </div>
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/treehouse/grand/treehouse6-grand.jpg" data-lightbox="mygallery" data-title="Toilettes sèches">
-                                <img src="assets/images/galerie/treehouse/petit/treehouse6-petit.jpg" />
-                            </a>
-                        </div>
-                        <!--Charpente pictures & Bardage pictures-->
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/charpente/grand/charpente1-grand.jpg" data-lightbox="mygallery" data-title="Abri en construction">
-                                <img src="assets/images/galerie/charpente/petit/charpente1-petit.jpg" />
-                            </a>
-                        </div>
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/charpente/grand/charpente2-grand.jpg" data-lightbox="mygallery" data-title="Abri fini">
-                                <img src="assets/images/galerie/charpente/petit/charpente2-petit.jpg" />
-                            </a>
-                        </div>
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/charpente/grand/charpente3-grand.jpg" data-lightbox="mygallery" data-title="Abri en construction">
-                                <img src="assets/images/galerie/charpente/petit/charpente3-petit.jpg" />
-                            </a>
-                        </div>
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/bardage/grand/bardage1-grand.jpg" data-lightbox="mygallery" data-title="Bardage extérieur">
-                                <img src="assets/images/galerie/bardage/petit/bardage1-petit.jpg" />
-                            </a>
-                        </div>
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/bardage/grand/bardage2-grand.jpg" data-lightbox="mygallery" data-title="Bardage extérieur">
-                                <img src="assets/images/galerie/bardage/petit/bardage2-petit.jpg" />
-                            </a>
-                        </div>
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/bardage/grand/bardage3-grand.jpg" data-lightbox="mygallery" data-title="Bardage extérieur: angle">
-                                <img src="assets/images/galerie/bardage/petit/bardage3-petit.jpg" />
-                            </a>
-                        </div>
-                        <!--Inetrieur pictures-->
                         <div class="item-galery">
                             <a href="assets/images/galerie/interieur/grand/interieur1-grand.jpg" data-lightbox="mygallery" data-title="Armoires encastrées">
                                 <img src="assets/images/galerie/interieur/petit/interieur1-petit.jpg" />
@@ -303,150 +218,19 @@
                                 <img src="assets/images/galerie/interieur/petit/interieur6-petit.jpg" />
                             </a>
                         </div>
-                        <!--Interieur pictures-->
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/tables/grand/table1-grand.jpg" data-lightbox="mygallery" data-title="Table en chène">
-                                <img src="assets/images/galerie/tables/petit/table1-petit.jpg" />
-                            </a>
-                        </div>
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/tables/grand/table2-grand.jpg" data-lightbox="mygallery" data-title="Table">
-                                <img src="assets/images/galerie/tables/petit/table2-petit.jpg" />
-                            </a>
-                        </div>
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/tables/grand/table3-grand.jpg" data-lightbox="mygallery" data-title="Table">
-                                <img src="assets/images/galerie/tables/petit/table3-petit.jpg" />
-                            </a>
-                        </div>
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/tables/grand/table4-grand.jpg" data-lightbox="mygallery" data-title="Table de salon en chène">
-                                <img src="assets/images/galerie/tables/petit/table4-petit.jpg" />
-                            </a>
-                        </div>
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/tables/grand/table5-grand.jpg" data-lightbox="mygallery" data-title="Table en noyer">
-                                <img src="assets/images/galerie/tables/petit/table5-petit.jpg" />
-                            </a>
-                        </div>
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/tables/grand/table6-grand.jpg" data-lightbox="mygallery" data-title="Table de salon en chène">
-                                <img src="assets/images/galerie/tables/petit/table6-petit.jpg" />
-                            </a>
-                        </div>
-                        <!--Planches pictures-->
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/planches/grand/planche1-grand.jpg" data-lightbox="mygallery" data-title="Noyer frâichement coupé">
-                                <img src="assets/images/galerie/planches/petit/planche1-petit.jpg" />
-                            </a>
-                        </div>
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/planches/grand/planche2-grand.jpg" data-lightbox="mygallery" data-title="Scierie locale">
-                                <img src="assets/images/galerie/planches/petit/planche2-petit.jpg" />
-                            </a>
-                        </div>
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/planches/grand/planche3-grand.jpg" data-lightbox="mygallery" data-title="Noyer">
-                                <img src="assets/images/galerie/planches/petit/planche3-petit.jpg" />
-                            </a>
-                        </div>
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/planches/grand/planche4-grand.jpg" data-lightbox="mygallery" data-title="Noyer">
-                                <img src="assets/images/galerie/planches/petit/planche4-petit.jpg" />
-                            </a>
-                        </div>
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/planches/grand/planche5-grand.jpg" data-lightbox="mygallery" data-title="Portal fermé">
-                                <img src="assets/images/galerie/planches/petit/planche5-petit.jpg" />
-                            </a>
-                        </div>
-                        <div class="item-galery">
-                            <a href="assets/images/galerie/planches/grand/planche6-grand.jpg" data-lightbox="mygallery" data-title="Portal ouvert">
-                                <img src="assets/images/galerie/planches/petit/planche6-petit.jpg" />
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact-->
-
-        <section class="section contact" data-anchor="contact">
-            <div class="section-border">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="main-form-text">
-                                <div class="form-text-wrapper">
-                                    <h2>À bientôt !</h2>
-                                    <div class="line"></div>
-                                    <p>
-                                        Travailler en tant qu’indépendant, c’est savoir privilégier la rencontre avec le
-                                        client.
-                                    </p>
-                                    <p>Je valorise une relation authentique et une écoute attentive.</p>
-                                    <p>Des questions? Besoin d'un devis? </p>
-                                    <p>N'hésitez pas à me contacter. </p>
-                                    <img src="assets/images/logo-black.svg" alt="logo Robin Wood">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="main-form">
-                                <form action=<?php $_SERVER['PHP_SELF']; ?> method="post">
-                                    <div class="form-group">
-                                        <label for="name">Nom et Prénom :</label>
-                                        <span class="error"><?= $name_error ?></span>
-                                        <input type="text" class="form-control" id="name" name="user_name" placeholder="Nom et Prénom">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="name">Téléphone :</label>
-                                        <span class="error"><?= $tel_error ?></span>
-                                        <input type="tel" class="form-control" id="tel" name="user_tel" placeholder="04XX / XX-XX-XX">
-                                    </div>
-                                    <div class=" form-group">
-                                        <label for="mail">E-mail :</label>
-                                        <span class="error"><?= $email_error ?></span>
-                                        <input type="email" class="form-control" id="mail" name="user_email" placeholder="adresse@mail.be">
-                                    </div>
-                                    <div class=" form-group">
-                                        <label for="subject">Sujet:</label><br>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="user_subject" checked>&nbsp; Informations &nbsp;
-                                        </label>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="user_subject">&nbsp; Demande de devis &nbsp;
-                                        </label>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="user_subject"> &nbsp; Autre
-                                        </label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="msg">Message :</label>
-                                        <span class="error"><?= $message_error ?></span>
-                                        <textarea class="form-control" id="msg" name="user_message" rows="5"></textarea>
-                                    </div>
-                                    <div class="button">
-                                        <button class="form-control" id="submit" type="submit" name="submit">Envoyer</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
 
-    </main>
 
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="assets/js/lightbox.min.js"></script>
-    <script src="assets/js/fullpage.min.js"></script>
+    <!-- <script src="assets/js/fullpage.min.js"></script> -->
     <script src="assets/js/functions.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
 </body>
 
 </html>

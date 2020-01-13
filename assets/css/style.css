@@ -49,6 +49,13 @@
   font-style: "normal";
   src: url("../font/Oswald/Oswald-Light.ttf"); }
 
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/fontawesome/fa-brands-400.eot");
+  src: url("../font/fontawesome/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../font/fontawesome/fa-brands-400.woff2") format("woff2"), url("../font/fontawesome/fa-brands-400.woff") format("woff"), url("../font/fontawesome/fa-brands-400.ttf") format("truetype"), url("../font/fontawesome/fa-brands-400.svg#fontawesome") format("svg"); }
+
 /* Menuiserie Rob'in Wood
  *
  * 
@@ -57,10 +64,12 @@
  * 2019
  */
 .header {
+  position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  height: 100vh;
+  height: calc(110vh + 100px + 25px);
   width: 100%;
   background-image: url("../images/background-header.jpg");
   background-size: 120% auto;
@@ -68,49 +77,290 @@
   background-position-x: 40%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  transition: background 0.15s ease-in-out; }
-  .header .logo-white {
-    text-align: center;
-    z-index: 1; }
-    .header .logo-white img {
-      height: 170px; }
-  .header .scroll-btn {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  transition: background 0.15s ease-in-out;
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 100px), 50% 100%, 0% calc(100% - 100px)); }
+  .header .header-wrapper {
+    position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 25px; }
-    .header .scroll-btn .mouse {
-      cursor: pointer;
-      height: 46px;
-      width: 26px;
-      border-radius: 20px;
-      border: 2px solid rgba(255, 255, 255, 0.25);
-      transition: border 0.5s ease, opacity 0.5s ease;
-      position: relative;
-      opacity: 1; }
-      .header .scroll-btn .mouse:hover {
-        border-color: white; }
-        .header .scroll-btn .mouse:hover .cursor {
-          background-color: white; }
-      .header .scroll-btn .mouse.hide {
-        opacity: 0; }
-      .header .scroll-btn .mouse .cursor {
-        animation: cursor 3s ease-in-out infinite;
-        height: 8px;
-        width: 3px;
+    height: 100vh;
+    width: 100%; }
+    .header .header-wrapper .header-logo {
+      text-align: center;
+      z-index: 1; }
+      .header .header-wrapper .header-logo img {
+        height: 170px; }
+    .header .header-wrapper .header-subtitle h1 {
+      font-family: "Oswald";
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+      font-size: 35px; }
+    .header .header-wrapper .header-subtitle h2 {
+      font-size: 25px;
+      font-weight: 700;
+      font-family: "Oswald";
+      color: #fff;
+      font-style: italic; }
+    .header .header-wrapper .header-icons {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      .header .header-wrapper .header-icons .icon-wrapper {
+        box-shadow: -1px 1px 5px rgba(17, 17, 17, 0.1);
+        color: #111;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 36px;
+        width: 36px;
         border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.25);
+        background-color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        margin: 0 5px;
+        transition: background 0.5s ease, color 0.5s ease; }
+        .header .header-wrapper .header-icons .icon-wrapper:hover {
+          background-color: white;
+          color: #508c70; }
+        .header .header-wrapper .header-icons .icon-wrapper:last-child i {
+          font-size: 16px; }
+      .header .header-wrapper .header-icons i {
+        font-size: 14px; }
+    .header .header-wrapper .scroll-btn {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 25px; }
+      .header .header-wrapper .scroll-btn .mouse {
+        cursor: pointer;
+        height: 46px;
+        width: 26px;
+        border-radius: 20px;
+        border: 2px solid rgba(255, 255, 255, 0.25);
+        transition: border 0.5s ease, opacity 0.5s ease;
+        position: relative;
+        opacity: 1; }
+        .header .header-wrapper .scroll-btn .mouse:hover {
+          border-color: white; }
+          .header .header-wrapper .scroll-btn .mouse:hover .cursor {
+            background-color: white; }
+        .header .header-wrapper .scroll-btn .mouse.hide {
+          opacity: 0; }
+        .header .header-wrapper .scroll-btn .mouse .cursor {
+          animation: cursor 3s ease-in-out infinite;
+          height: 8px;
+          width: 3px;
+          border-radius: 50%;
+          background-color: rgba(255, 255, 255, 0.25);
+          position: absolute;
+          top: 10px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          transition: background 0.5s ease; }
+
+.about {
+  clip-path: polygon(0% 0%, 50% 100px, 100% 0%, 100% calc(100% - 100px), 50% 100%, 0% calc(100% - 100px));
+  position: relative;
+  padding-bottom: 125px;
+  padding-top: 200px;
+  background: linear-gradient(to bottom, #fef6f3, #fff);
+  margin-top: -20vh; }
+  .about .section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 25px; }
+    .about .section-title h2 {
+      color: #333333;
+      margin-bottom: 30px; }
+    .about .section-title p {
+      text-align: center; }
+  .about .about-text .row {
+    margin-bottom: 15px; }
+    .about .about-text .row:last-child {
+      margin-bottom: 0; }
+      .about .about-text .row:last-child .picture-wrapper.left img {
+        border-radius: 50% 50% 50% 0; }
+      .about .about-text .row:last-child .picture-wrapper.right img {
+        border-radius: 50% 50% 0 50%; }
+    .about .about-text .row .picture-wrapper {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%; }
+      .about .about-text .row .picture-wrapper.left {
+        justify-content: flex-end; }
+        .about .about-text .row .picture-wrapper.left img {
+          border-radius: 50% 0% 50% 50%; }
+      .about .about-text .row .picture-wrapper.right {
+        justify-content: flex-start; }
+        .about .about-text .row .picture-wrapper.right img {
+          border-radius: 0 50% 50% 50%; }
+      .about .about-text .row .picture-wrapper img {
+        width: 115px;
+        height: 115px; }
+  .about .about-text h3 {
+    color: #508c70;
+    text-transform: uppercase;
+    font-size: 18px; }
+  .about .about-text p {
+    text-align: justify; }
+    .about .about-text p .hashtag {
+      font-size: 12px;
+      font-weight: 700;
+      color: #876c5b;
+      text-transform: uppercase; }
+    .about .about-text p .bolder {
+      font-weight: 600; }
+  .about button {
+    margin: auto;
+    background-color: #508c70;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 11px;
+    padding: 7px 10px;
+    border-radius: 2px;
+    box-shadow: -1px 1px 6px rgba(0, 0, 0, 0.25);
+    display: block;
+    transition: box-shadow 0.25s ease, transform 0.25s ease, background 0.25s ease;
+    margin-top: 10px;
+    font-weight: 600; }
+    .about button:hover {
+      background-color: #477c63;
+      box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.5);
+      transform: translate(2px, -2px); }
+
+.shop {
+  clip-path: polygon(0% 0%, 50% 100px, 100% 0%, 100% calc(100% - 100px), 50% 100%, 0% calc(100% - 100px));
+  background-color: #eee;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  height: calc(70vh + 2 * 100px);
+  position: relative; }
+  .shop .shop-black-filter {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+    .shop .shop-black-filter .shop-logo {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .shop .shop-black-filter .shop-logo img {
+        width: 55%;
+        height: auto;
+        margin-top: 20vh;
+        animation: rotation 150s infinite linear; }
+
+.gallery {
+  padding-top: 75px;
+  margin-bottom: 50vh; }
+  .gallery .item-wrapper {
+    overflow: hidden; }
+    .gallery .item-wrapper .item {
+      position: relative;
+      height: 500px;
+      width: 100%;
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      filter: grayscale(0.2);
+      transition: transform 5s ease; }
+      .gallery .item-wrapper .item::after {
         position: absolute;
         top: 10px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        transition: background 0.5s ease; }
+        bottom: 10px;
+        right: 10px;
+        left: 10px;
+        border: solid 1px grey; }
+      .gallery .item-wrapper .item:hover {
+        filter: grayscale(0);
+        transform: scale(1.1); }
+
+.modal {
+  z-index: 99999;
+  position: fixed; }
+  .modal .modal-dialog {
+    max-width: 100vw !important;
+    position: fixed;
+    right: 50px;
+    left: 50px;
+    width: 80%;
+    height: 80%;
+    padding: 0; }
+  .modal .modal-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 0;
+    box-shadow: none; }
+  .modal .modal-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+    padding: 10px;
+    background: #508c70;
+    border: 0; }
+  .modal .modal-body {
+    position: absolute;
+    top: 50px;
+    bottom: 60px;
+    width: 100%;
+    font-weight: 300;
+    overflow: auto; }
+  .modal .modal-footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 60px;
+    padding: 10px;
+    background: #f1f3f5; }
+  .modal .all-items-galery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%; }
+    .modal .all-items-galery .item-galery {
+      overflow: hidden;
+      width: 185px;
+      height: 144px;
+      padding: 10px; }
+      .modal .all-items-galery .item-galery img {
+        transition: 600ms;
+        height: 100%;
+        width: 100%; }
+        .modal .all-items-galery .item-galery img:hover {
+          transform: scale(1.1); }
+
+.lightboxOverlay,
+.lightbox,
+.lb-outerContainer,
+.lb-container,
+.lb-image {
+  z-index: 999999; }
 
 /***
 ********** Animations
@@ -123,293 +373,11 @@
   100% {
     top: 10px; } }
 
-/* Menuiserie Rob'in Wood
- *
- * 
- * coded by Augustin Dumont
- * http://augustindumont.be
- * 2019
- */
-.introduction {
-  background-color: white;
-  color: rgba(0, 0, 0, 0.75); }
-  .introduction .section-border::after {
-    background-image: url(../images/backgrounds/background-sapin-3plans.svg);
-    background-position: 50% 0%;
-    background-size: cover; }
-  .introduction::after {
-    content: "home";
-    position: absolute;
-    top: 50%;
-    left: 37px;
-    margin-top: -50px;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 1.3em;
-    color: #508c70; }
-  .introduction .text-wrapper {
-    height: 100%;
-    padding-top: 40px;
-    text-align: left;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%; }
-  .introduction .picture-wrapper {
-    height: 100%;
-    position: relative;
-    border-radius: 1%; }
-    .introduction .picture-wrapper .picture {
-      height: 100%;
-      width: 100%;
-      background-image: url("../images/galerie/introduction/introduction-menuiserie.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      opacity: 1;
-      transition: all 500ms ease-out;
-      border-radius: 1%; }
-    .introduction .picture-wrapper .content-picture {
-      padding: 40px 50px 50px 50px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      transform: scaleY(0);
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      transition: transform 500ms ease; }
-      .introduction .picture-wrapper .content-picture h2,
-      .introduction .picture-wrapper .content-picture p {
-        color: #fff; }
-  .introduction .links {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center; }
-    .introduction .links .link-wrapper {
-      background: #fff;
-      border: solid 2px white;
-      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-      box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.25);
-      cursor: pointer;
-      padding: 15px;
-      text-align: center; }
-      .introduction .links .link-wrapper .link-title {
-        color: #508c70;
-        font-weight: bold; }
-      .introduction .links .link-wrapper .link-description {
-        color: #333333;
-        font-size: 12px; }
-      .introduction .links .link-wrapper:hover {
-        border: solid 2px #508c70; }
-
-/* Menuiserie Rob'in Wood
- *
- * 
- * coded by Augustin Dumont
- * http://augustindumont.be
- * 2019
- */
-.store {
-  margin-bottom: 100px;
-  position: relative; }
-  .store .section-border::after {
-    background-image: url(../images/backgrounds/background-sapin.svg);
-    background-position: 50% 0%; }
-  .store::after {
-    content: "atelier";
-    position: absolute;
-    top: 50%;
-    left: 37px;
-    margin-top: -97px;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 1.3em;
-    color: #508c70;
-    padding: 10px 0; }
-  .store .wrapper-cycle {
-    height: 100%;
-    width: 100%; }
-    .store .wrapper-cycle .text-wrapper-cycle {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 100%;
-      width: auto; }
-  .store .logo-cycle {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end; }
-    .store .logo-cycle img {
-      height: 100%;
-      width: auto; }
-
-.first-carousel {
-  height: 100%; }
-  .first-carousel .owl-stage-outer {
-    height: 100%; }
-    .first-carousel .owl-stage-outer .owl-stage {
-      height: 100%;
-      display: flex;
-      align-items: center !important;
-      justify-content: center !important; }
-      .first-carousel .owl-stage-outer .owl-stage .owl-item > .item {
-        cursor: pointer;
-        margin: 6% 8%;
-        transition: margin 0.6s ease; }
-      .first-carousel .owl-stage-outer .owl-stage .owl-item.center > .item {
-        cursor: auto;
-        margin: 0; }
-      .first-carousel .owl-stage-outer .owl-stage .owl-item:not(.center) > div:hover {
-        opacity: 0.75; }
-
-/***
-**********Animations
-***/
 @keyframes rotation {
   from {
     -webkit-transform: rotate(0deg); }
   to {
     -webkit-transform: rotate(359deg); } }
-
-/* Menuiserie Rob'in Wood
- *
- * 
- * coded by Augustin Dumont
- * http://augustindumont.be
- * 2019
- */
-.gallery {
-  position: relative; }
-  .gallery .section-border::after {
-    background-image: url(../images/backgrounds/background-sapin.svg); }
-  .gallery::after {
-    content: "galerie";
-    position: absolute;
-    top: 50%;
-    left: 37px;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 1.3em;
-    color: #508c70;
-    padding: 20px 0;
-    margin-top: -100px; }
-  .gallery .section-border,
-  .gallery .section-border > .container-fluid {
-    overflow-x: scroll; }
-  .gallery .all-items-galery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 100%; }
-    .gallery .all-items-galery .item-galery {
-      overflow: hidden;
-      width: 185px;
-      height: 144px;
-      padding: 10px; }
-      .gallery .all-items-galery .item-galery img {
-        transition: 600ms;
-        height: 100%;
-        width: 100%; }
-        .gallery .all-items-galery .item-galery img:hover {
-          transform: scale(1.1); }
-
-/***
-************Scroll bar gallery
-***/
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-  background-color: #f5f5f5;
-  border-radius: 15px; }
-
-::-webkit-scrollbar {
-  height: 0px;
-  width: 7px;
-  background-color: #f5f5f5; }
-
-::-webkit-scrollbar-thumb {
-  border-radius: 15px;
-  background-color: #fff;
-  background-image: -webkit-gradient(linear, 40% 0%, 75% 84%, from(#508c70), to(#97c4b0)); }
-
-/* Menuiserie Rob'in Wood
- *
- * 
- * coded by Augustin Dumont
- * http://augustindumont.be
- * 2019
- */
-.contact {
-  margin-bottom: 100px; }
-  .contact .section-border::after {
-    background-image: url(../images/backgrounds/background-sapin-photo.jpg);
-    background-position: 50% 50%; }
-  .contact::after {
-    content: "contact";
-    position: absolute;
-    top: 50%;
-    left: 37px;
-    margin-top: -97px;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 1.3em;
-    color: #508c70;
-    padding: 10px 0; }
-  .contact .main-form-text {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-    .contact .main-form-text .form-text-wrapper img {
-      padding-top: 30px;
-      width: 150px; }
-  .contact .main-form {
-    width: 100%;
-    height: 100%;
-    padding-right: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end; }
-    .contact .main-form form {
-      width: 70%; }
-      .contact .main-form form .form-group {
-        width: 100%; }
-        .contact .main-form form .form-group .form-control {
-          opacity: 0.8;
-          font-size: 12px; }
-          .contact .main-form form .form-group .form-control:focus {
-            border: 1px outset #eeeeee;
-            box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
-            opacity: 1; }
-      .contact .main-form form label {
-        color: #508c70; }
-      .contact .main-form form button {
-        width: 150px;
-        margin: auto;
-        background-color: #508c70;
-        color: white;
-        transition: 300ms ease-in-out;
-        opacity: 0.9; }
-        .contact .main-form form button:hover {
-          opacity: 1; }
 
 /***
 .......Navbar
@@ -429,7 +397,7 @@
 body {
   background-color: #fff;
   font-size: 14px;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "OpenSans", sans-serif;
   overflow-x: hidden; }
 
 header {
@@ -439,24 +407,22 @@ main {
   z-index: 2000;
   position: relative; }
 
-h2 {
-  color: #333333;
-  font-family: "Oswald";
-  text-transform: uppercase;
-  font-size: 32px;
-  font-weight: 300;
-  margin-bottom: 25px; }
-
 p {
   color: #333333;
   font-weight: 400;
   font-family: "Roboto"; }
+
+button {
+  border: 0;
+  outline: 0;
+  margin: 0; }
 
 /***
 .......Main classes
 ***/
 .section-border {
   padding: 100px;
+  position: relative;
   height: 100%;
   width: 100%; }
   .section-border::after {

@@ -9,11 +9,11 @@
 @import "./shared";
 @import "./partials/fonts";
 @import "./partials/header";
-@import "./partials/introduction";
-@import "./partials/store";
-@import "./partials/gallery";
-@import "./partials/contact";
-@import "./partials/footer";
+// @import "./partials/introduction";
+// @import "./partials/store";
+// @import "./partials/gallery";
+// @import "./partials/contact";
+// @import "./partials/footer";
 
 
 
@@ -44,7 +44,7 @@
 body {
   background-color: #fff;
   font-size: 14px;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "OpenSans", sans-serif;
   overflow-x: hidden;
 }
 
@@ -57,19 +57,25 @@ main {
   position: relative;
 }
 
-h2 {
-  color: $dark;
-  font-family: "Oswald";
-  text-transform: uppercase;
-  font-size: 32px;
-  font-weight: 300;
-  margin-bottom: 25px;
-}
+// h2 {
+//   color: $dark;
+//   font-family: "Oswald";
+//   text-transform: uppercase;
+//   font-size: 32px;
+//   font-weight: 300;
+//   margin-bottom: 25px;
+// }
 
 p {
   color: $dark;
   font-weight: 400;
   font-family: "Roboto";
+}
+
+button {
+  border: 0;
+  outline: 0;
+  margin: 0;
 }
 
 
@@ -82,6 +88,7 @@ p {
 
 .section-border {
   padding: 100px;
+  position: relative;
   height: 100%;
   width: 100%;
 

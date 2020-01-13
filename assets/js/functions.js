@@ -36,18 +36,6 @@
 
   $(document).ready(function () {
     $(".owl-carousel").owlCarousel();
-    $("#fullpage").fullpage({
-      anchors: ["home", "introduction", "store", "gallery", "contact"],
-      navigation: true,
-      onLeave: function (origin, destination, direction) {
-        if (origin == 1 && destination == 2) {
-          $(nav).addClass("active");
-        }
-        if (destination == 1) {
-          $(nav).removeClass("active");
-        }
-      }
-    });
     headerAnimation();
   });
 
@@ -61,65 +49,12 @@
     });
   }
 
-  // INTRODUCTION 
-
-  var pictureWrapper = document.querySelector(".picture");
-  var links = document.querySelector(".links");
-  let contentPicture = document.querySelectorAll(".content-picture");
-  var contentPictureMenuiserie = document.querySelector(".content-picture-menuiserie");
-  var contentPictureCharpente = document.querySelector(".content-picture-charpente");
-  var contentPictureTreehouse = document.querySelector(".content-picture-treehouse");
-  var contentPictureElagage = document.querySelector(".content-picture-elagage");
-
-  document.getElementById("link-wrapper-menuiserie").addEventListener("mouseover", () => {
-    pictureWrapper.style.backgroundImage = 'url("assets/images/galerie/introduction/introduction-menuiserie.jpg")';
-    contentPictureMenuiserie.classList.remove("d-none");
-    contentPictureCharpente.classList.add("d-none");
-    contentPictureTreehouse.classList.add("d-none");
-    contentPictureElagage.classList.add("d-none");
-  });
-  document.getElementById("link-wrapper-charpente").addEventListener("mouseover", () => {
-    pictureWrapper.style.backgroundImage = 'url("assets/images/galerie/introduction/introduction-charpente.jpg")';
-    contentPictureCharpente.classList.remove("d-none");
-    contentPictureMenuiserie.classList.add("d-none");
-    contentPictureTreehouse.classList.add("d-none");
-    contentPictureElagage.classList.add("d-none");
-  });
-  document.getElementById("link-wrapper-treehouse").addEventListener("mouseover", () => {
-    pictureWrapper.style.backgroundImage = 'url("assets/images/galerie/introduction/introduction-treehouse.jpg")';
-    contentPictureTreehouse.classList.remove("d-none");
-    contentPictureMenuiserie.classList.add("d-none");
-    contentPictureCharpente.classList.add("d-none");
-    contentPictureElagage.classList.add("d-none");
-  });
-  document.getElementById("link-wrapper-elagage").addEventListener("mouseover", () => {
-    pictureWrapper.style.backgroundImage = 'url("assets/images/galerie/introduction/introduction-elagage.jpg")';
-    contentPictureElagage.classList.remove("d-none");
-    contentPictureMenuiserie.classList.add("d-none");
-    contentPictureCharpente.classList.add("d-none");
-    contentPictureTreehouse.classList.add("d-none");
-  });
-
-  document.querySelector("body").addEventListener("click", e => {
-    if (links.contains(e.target)) {
-      contentPicture.forEach(element => {
-        element.style.transform = "scaleY(1)";
-      });
-    } else {
-      contentPicture.forEach(element => {
-        element.style.transform = "scaleY(0)";
-      });
-    }
-  });
-
 
   // OWL CAROUSEL 
 
   $(".owl-carousel").owlCarousel({
-    items: 1,
-    center: true,
+    items: 4,
     // autoplay: true,
-    autoplayTimeout: 10000,
     loop: true,
     lazyLoad: true,
     margin: 15,
