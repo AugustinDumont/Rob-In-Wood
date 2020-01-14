@@ -35,6 +35,7 @@
   // ON READY OWL-CAROUSEL + FULLPAGE
 
   $(document).ready(function () {
+    $(".shop-owl-carousel").owlCarousel();
     $(".owl-carousel").owlCarousel();
     headerAnimation();
   });
@@ -50,7 +51,15 @@
   }
 
 
-  // OWL CAROUSEL 
+  // OWL CAROUSEL
+  $(".shop-owl-carousel").owlCarousel({
+    items: 1,
+    // autoplay: true,
+    lazyLoad: true,
+    nav: false,
+    navText: ["<img src='./assets/images/logos/white-nut-flipped.svg' width='40px'>", "<img src='./assets/images/logos/white-nut.svg' width='40px'>"]
+  });
+
 
   $(".owl-carousel").owlCarousel({
     items: 4,
@@ -58,7 +67,13 @@
     loop: true,
     lazyLoad: true,
     margin: 15,
-    nav: true,
+    nav: false,
     // navText: 
   });
+
+  document.getElementById("click-to-rotate").addEventListener("click", () => {
+    document.getElementById("logo-rotate").classList.toggle("rotate");
+  })
+
+
 })();
