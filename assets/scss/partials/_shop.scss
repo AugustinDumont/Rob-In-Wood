@@ -1,0 +1,212 @@
+/* Menuiserie Rob'in Wood
+ *
+ * 
+ * coded by Augustin Dumont
+ * http://augustindumont.be
+ * 2019
+ */
+
+
+.shop {
+  clip-path: polygon(0% 0%, 50% $angle, 100% 0%, 100% calc(100% - #{$angle}), 50% 100%, 0% calc(100% - #{$angle}));
+  background-color: #eee;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  height: calc(70vh + 2 * #{$angle});
+  position: relative;
+
+  .shop-black-filter {
+    background-color: rgba(black, 0.75);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  #click-to-rotate {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    height: 55px;
+    width: 55px;
+    border: dashed 2px #fff;
+    border-radius: 50%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: sizing 1.5s infinite ease-in-out;
+
+    img {
+      padding: 5px;
+      height: 45px;
+      width: auto;
+    }
+  }
+
+  .shop-logo {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      position: relative;
+      width: 90%;
+      height: auto;
+      margin-top: 20vh;
+    }
+
+    .rotate {
+      animation: rotation 150s infinite linear;
+    }
+  }
+}
+
+.shop-text-wrapper {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  h2 {
+    font-family: "Cantora One";
+    color: $green-flash-color;
+    text-transform: uppercase;
+    text-align: left;
+    width: 60%;
+  }
+
+  .line {
+    margin-left: -45%;
+  }
+
+  p {
+    text-align: justify;
+    font-size: 15px;
+    color: #fef6f3;
+    margin: 20px 20% 40px 20%;
+    font-weight: 700;
+
+    a,
+    .green-flash-color {
+      text-decoration: none;
+      background: $green-flash-color;
+      color: #fef6f3;
+      padding: 0 3px;
+    }
+  }
+
+  .shop-sizing-carousel {
+    position: relative;
+    max-height: 190px;
+    max-width: 250px;
+
+    .shop-item {
+      position: relative;
+      height: 190px;
+      width: 250px;
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      border-radius: 2%;
+
+      &::after {
+        content: "800€";
+        font-weight: 600;
+        position: absolute;
+        top: -5px;
+        left: -10px;
+        background: $marron;
+        color: #fff;
+        padding: 0px 7px;
+        transform: rotate(-29deg);
+        border-radius: 5%;
+      }
+
+      &::before {
+        content: "table à manger";
+        text-transform: uppercase;
+        font-weight: 600;
+        position: absolute;
+        bottom: -6px;
+        right: -6px;
+        background: $green-flash-color;
+        color: #fff;
+        padding: 0px 7px;
+        border-radius: 5%;
+      }
+    }
+
+    .owl-nav {
+      .owl-prev {
+        background: none;
+        position: absolute;
+        bottom: 40%;
+        left: -20%;
+        transition: all 100ms ease-in;
+
+        .fa-angle-left {
+          font-size: 30px;
+          transition: all 200ms ease-in-out;
+        }
+
+        &:hover {
+          box-shadow: none;
+          transform: translate(0px, 0px);
+
+          .fa-angle-left {
+            color: $green-flash-color;
+            transform: translateX(-2px);
+          }
+        }
+      }
+
+      .owl-next {
+        background: none;
+        position: absolute;
+        bottom: 40%;
+        right: -20%;
+        transition: all 200ms ease-in;
+
+        .fa-angle-right {
+          font-size: 30px;
+          transition: all 200ms ease-in-out;
+        }
+
+        &:hover {
+          box-shadow: none;
+          transform: translate(0px, 0px);
+
+          .fa-angle-right {
+            color: $green-flash-color;
+            transform: translateX(2px);
+          }
+        }
+      }
+    }
+
+    .owl-dots {
+      display: none !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+
+  .shop {
+    #click-to-rotate {
+      display: none;
+    }
+
+    .shop-text-wrapper {
+      padding-top: 20vh;
+    }
+  }
+}

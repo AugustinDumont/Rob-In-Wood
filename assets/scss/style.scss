@@ -6,35 +6,22 @@
  * 2019
  */
 
-@import "./shared";
 @import "./partials/fonts";
 @import "./partials/header";
-// @import "./partials/introduction";
-// @import "./partials/store";
-// @import "./partials/gallery";
-// @import "./partials/contact";
-// @import "./partials/footer";
-
-
+@import "./partials/about";
+@import "./partials/shop";
+@import "./partials/gallery";
+@import "./partials/modals";
+@import "./partials/contact";
 
 
 /***
-.......Navbar
+.......Main colors
 ***/
 
-#fp-nav {
-  margin-top: 0px !important;
-  right: 36px !important;
-  top: 50% !important;
-  margin-top: -53px !important;
-  z-index: 9999 !important;
-
-  span {
-    background: $green_flash_color !important;
-  }
-}
-
-
+$green_flash_color: #508c70;
+$dark: #333333;
+$marron:#876c5b;
 
 
 /***
@@ -44,7 +31,6 @@
 body {
   background-color: #fff;
   font-size: 14px;
-  font-family: "OpenSans", sans-serif;
   overflow-x: hidden;
 }
 
@@ -56,15 +42,6 @@ main {
   z-index: 2000;
   position: relative;
 }
-
-// h2 {
-//   color: $dark;
-//   font-family: "Oswald";
-//   text-transform: uppercase;
-//   font-size: 32px;
-//   font-weight: 300;
-//   margin-bottom: 25px;
-// }
 
 p {
   color: $dark;
@@ -79,46 +56,44 @@ button {
 }
 
 
-
-
-
 /***
-.......Main classes
+********** Animations
 ***/
 
-.section-border {
-  padding: 100px;
-  position: relative;
-  height: 100%;
-  width: 100%;
-
-  &::after {
-    background: #fff;
-    border: 1px solid #eee;
-    content: "";
-    position: absolute;
-    top: 50px;
-    bottom: 50px;
-    left: 50px;
-    right: 50px;
+@keyframes cursor {
+  0% {
+    top: 10px;
   }
 
-  .line {
-    height: 4px;
-    width: 25px;
-    background-color: $green_flash_color;
-    border-radius: 4px;
-    margin-bottom: 25px;
-    opacity: 0.75;
+  70% {
+    top: 26px;
   }
 
-  >.container-fluid {
-    height: 100%;
-    position: relative;
-    z-index: 1;
+  100% {
+    top: 10px;
+  }
+}
 
-    >.row {
-      height: 100%;
-    }
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@keyframes sizing {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }

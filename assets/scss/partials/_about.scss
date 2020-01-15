@@ -1,0 +1,142 @@
+/* Menuiserie Rob'in Wood
+ *
+ * 
+ * coded by Augustin Dumont
+ * http://augustindumont.be
+ * 2019
+ */
+
+
+.about {
+  clip-path: polygon(0% 0%, 50% $angle, 100% 0%, 100% calc(100% - #{$angle}), 50% 100%, 0% calc(100% - #{$angle}));
+  position: relative;
+  padding-bottom: 125px;
+  padding-top: 200px;
+  background: linear-gradient(to bottom, #fef6f3, #fff);
+  margin-top: -20vh;
+
+  .section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+
+    h2 {
+      text-transform: uppercase;
+      font-family: "Cantora One";
+      color: $green-flash-color;
+    }
+
+    .line-bottom {
+      margin-bottom: 30px;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .about-text {
+    .row {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+
+        .picture-wrapper {
+          &.left {
+            img {
+              border-radius: 50% 50% 50% 0;
+            }
+          }
+
+          &.right {
+            img {
+              border-radius: 50% 50% 0 50%;
+            }
+          }
+        }
+      }
+
+      .picture-wrapper {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+
+        &.left {
+          justify-content: flex-end;
+
+          img {
+            border-radius: 50% 0% 50% 50%;
+          }
+        }
+
+        &.right {
+          justify-content: flex-start;
+
+          img {
+            border-radius: 0 50% 50% 50%;
+          }
+        }
+
+        img {
+          width: 115px;
+          height: 115px;
+        }
+      }
+    }
+
+    h3 {
+      font-family: "Cantora One";
+      color: $green-flash-color;
+      text-transform: uppercase;
+      font-size: 18px;
+    }
+
+    p {
+      text-align: justify;
+
+      .hashtag {
+        font-size: 12px;
+        font-weight: 700;
+        color: $marron;
+        text-transform: uppercase;
+      }
+
+      .bolder {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  button {
+    bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+
+  .about .section-title h2 {
+    font-size: 25px;
+  }
+
+  .about .section-title p {
+    text-align: justify;
+  }
+
+  .about .about-text .row .picture-wrapper.left img,
+  .about .about-text .row:last-child .picture-wrapper.right img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50% 50% 50% 50%;
+    margin: auto;
+  }
+
+  .about .about-text h3 {
+    margin-top: 30px;
+  }
+}

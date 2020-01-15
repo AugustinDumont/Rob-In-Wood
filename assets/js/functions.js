@@ -57,7 +57,7 @@
     // autoplay: true,
     lazyLoad: true,
     nav: false,
-    navText: ["<img src='./assets/images/logos/white-nut-flipped.svg' width='40px'>", "<img src='./assets/images/logos/white-nut.svg' width='40px'>"]
+    navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"]
   });
 
 
@@ -75,5 +75,8 @@
     document.getElementById("logo-rotate").classList.toggle("rotate");
   })
 
+  document.getElementById("tel-icon").addEventListener("click", () => {
+    document.getElementById("tel-num").classList.toggle("d-none");
+  })
 
 })();

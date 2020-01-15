@@ -26,14 +26,8 @@
   src: url("../font/Oswald/Oswald-Light.ttf");
 }
 
-@font-face {
-  font-family: 'Font Awesome 5 Brands';
-  font-style: normal;
-  font-weight: normal;
-  src: url('../font/fontawesome/fa-brands-400.eot');
-  src: url('../font/fontawesome/fa-brands-400.eot?#iefix') format('embedded-opentype'),
-    url('../font/fontawesome/fa-brands-400.woff2') format('woff2'),
-    url('../font/fontawesome/fa-brands-400.woff') format('woff'),
-    url('../font/fontawesome/fa-brands-400.ttf') format('truetype'),
-    url('../font/fontawesome/fa-brands-400.svg#fontawesome') format('svg');
+@font-face{
+  font-family: 'Cantora One';
+  font-style:"normal";
+  src: url("../font/CantoraOne-Regular.ttf");
 }

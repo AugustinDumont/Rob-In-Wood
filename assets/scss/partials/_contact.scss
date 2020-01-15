@@ -6,32 +6,16 @@
  * 2019
  */
 
-// CONTACT
+
 
 .contact {
-  margin-bottom: 100px;
-
-  .section-border {
-    &::after {
-      background-image: url(../images/backgrounds/background-sapin-photo.jpg);
-      background-position: 50% 50%;
-    }
-  }
-
-  &::after {
-    content: "contact";
-    position: absolute;
-    top: 50%;
-    left: 37px;
-    margin-top: -97px;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 1.3em;
-    color: $green_flash_color;
-    padding: 10px 0;
-  }
+  position: relative;
+  background-size: cover;
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background: linear-gradient(to top, 10%rgba (0, 0, 0, 0), 90% rgba(#e5e5e7, 0.3));
+  height: 110vh;
+  // clip-path: polygon(50% 0%, 100% $angle, 100% 100%, 0 100%, 0 $angle);
 
   .main-form-text {
     width: 100%;
@@ -42,25 +26,35 @@
     align-items: center;
 
     .form-text-wrapper {
+      h2 {
+        font-family: "Cantora One";
+        color: $green-flash-color;
+        text-transform: uppercase;
+      }
 
       img {
         padding-top: 30px;
         width: 150px;
+      }
+
+      p {
+        margin-top: 50px;
       }
     }
   }
 
   .main-form {
     width: 100%;
-    height: 100%;
-    padding-right: 50px;
+    height: 70%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-end;
 
     form {
-      width: 70%;
+      padding-top: 10vh;
+      width: 80%;
+      height: 80%;
 
       .form-group {
         width: 100%;
@@ -79,18 +73,145 @@
 
       label {
         color: $green_flash_color;
+        text-transform: uppercase;
+        font-family: "Cantora One";
       }
 
-      button {
-        width: 150px;
+      .submit {
+        font-size: 12px;
+        padding: 5px 8px;
+        position: relative;
         margin: auto;
-        background-color: $green_flash_color;
-        color: white;
-        transition: 300ms ease-in-out;
-        opacity: 0.9;
+      }
+    }
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    background: rgba($marron, 0.5);
+
+    .made-by {
+      position: absolute;
+      left: 20px;
+      bottom: 9px;
+      text-decoration: none;
+
+      p {
+        font-family: "Cantora One";
+        font-family: "OpenSans";
+        font-weight: 600;
+        color: #fff;
+        font-style: italic;
+        margin: 0;
+        opacity: 0.4;
 
         &:hover {
-          opacity: 1;
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .icon-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background-color: rgba(#fff, 0.85);
+      margin: 0 20px;
+      cursor: pointer;
+      transition: 200ms ease-in;
+
+      &:hover {
+        background-color: rgba(#fff, 1);
+      }
+
+      .fa-phone,
+      .fa-facebook-f,
+      .fa-instagram {
+        color: $green-flash-color;
+        align-items: center;
+      }
+    }
+
+    .tel {
+      p {
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        margin: auto auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact {
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, .35);
+      z-index: -1;
+    }
+
+    .main-form-text {
+      margin-top: 10vh;
+
+      .form-text-wrapper {
+        h2 {
+          text-align: center;
+          margin-bottom: 10px;
+        }
+
+        .line {
+          margin: auto;
+        }
+
+        p {
+          text-align: center;
+          margin: 30px 10%;
+        }
+
+        img {
+          margin-left: 35%;
+          padding-top: 0;
+        }
+      }
+    }
+
+    .main-form {
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+
+      form {
+        padding-top: 2vh;
+        height: 100%;
+
+        label {
+          color: $dark;
+        }
+
+        label.radio-inline {
+          color: white !important;
+        }
+
+        .submit {
+          margin-top: 50px;
         }
       }
     }
