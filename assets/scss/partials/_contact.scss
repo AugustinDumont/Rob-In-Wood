@@ -35,6 +35,8 @@
       img {
         padding-top: 30px;
         width: 150px;
+        margin-left: 50%;
+        transform: translateX(-75px);
       }
 
       p {
@@ -154,8 +156,10 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   .contact {
+    height: 85vh;
+
     &::after {
       position: absolute;
       content: "";
@@ -168,7 +172,9 @@
     }
 
     .main-form-text {
-      margin-top: 10vh;
+      margin-top: 0vh;
+      padding-top: 23vh;
+      justify-content: flex-start;
 
       .form-text-wrapper {
         h2 {
@@ -183,11 +189,11 @@
         p {
           text-align: center;
           margin: 30px 10%;
+          font-size: 16px;
         }
 
         img {
-          margin-left: 35%;
-          padding-top: 0;
+          padding-top: 20px;
         }
       }
     }
@@ -215,5 +221,51 @@
         }
       }
     }
+  }
+
+  .to-email {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    a {
+      text-align: center;
+      text-decoration: none;
+      color: $green-flash-color;
+      font-weight: 700;
+    }
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .contact .main-form-text {
+    padding-top: 13vh;
+  }
+
+  .contact .main-form-text .form-text-wrapper p {
+    margin: 30px 0%;
+    font-size: 14px;
+  }
+
+  .annu-margin {
+    margin: 0;
+  }
+}
+
+.contact footer .icon-wrapper {
+  height: 25px;
+  width: 25px;
+  margin: 0px 10px;
+}
+
+@media only screen and (max-width: 375px) {
+  .contact .main-form-text .form-text-wrapper p {
+    margin: 20px 0%;
+    font-size: 13px;
+  }
+
+  .contact .main-form-text {
+    padding-top: 10vh;
   }
 }

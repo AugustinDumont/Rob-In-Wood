@@ -215,6 +215,28 @@ button {
   }
 }
 
+@media only screen and (max-width: 414px) {
+  p {
+    font-size: 12px;
+  }
+
+  .header .header-wrapper .header-logo {
+    margin-top: 10vh;
+  }
+
+  .header .header-wrapper .header-logo img {
+    height: 90px;
+  }
+
+  .header .header-wrapper .header-subtitle h1 {
+    font-size: 26px;
+  }
+
+  .header .header-wrapper .header-subtitle h2 {
+    font-size: 14px;
+  }
+}
+
 @media only screen and (max-width: 360px) {
   p {
     font-size: 12px;
@@ -234,5 +256,12 @@ button {
 
   .header .header-wrapper .header-subtitle h2 {
     font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .header .header-wrapper .header-subtitle h2 {
+
+    font-size: 11px;
   }
 }

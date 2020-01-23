@@ -62,14 +62,24 @@
 
 
   $(".owl-carousel").owlCarousel({
-    items: 4,
-    // autoplay: true,
+    items: 2,
+    autoplay: true,
+    autoplayTimeout: 5000,
     loop: true,
     lazyLoad: true,
     margin: 15,
     nav: false,
     // navText: 
+    responsive: {
+      768: {
+        items: 3,
+      },
+      992: {
+        items: 4,
+      }
+    }
   });
+
 
   document.getElementById("click-to-rotate").addEventListener("click", () => {
     document.getElementById("logo-rotate").classList.toggle("rotate");

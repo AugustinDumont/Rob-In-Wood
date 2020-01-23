@@ -190,6 +190,18 @@ button {
   .header .header-wrapper .scroll-btn .mouse .cursor {
     background-color: white; } }
 
+@media only screen and (max-width: 414px) {
+  p {
+    font-size: 12px; }
+  .header .header-wrapper .header-logo {
+    margin-top: 10vh; }
+  .header .header-wrapper .header-logo img {
+    height: 90px; }
+  .header .header-wrapper .header-subtitle h1 {
+    font-size: 26px; }
+  .header .header-wrapper .header-subtitle h2 {
+    font-size: 14px; } }
+
 @media only screen and (max-width: 360px) {
   p {
     font-size: 12px; }
@@ -201,6 +213,10 @@ button {
     font-size: 23px; }
   .header .header-wrapper .header-subtitle h2 {
     font-size: 12px; } }
+
+@media only screen and (max-width: 340px) {
+  .header .header-wrapper .header-subtitle h2 {
+    font-size: 11px; } }
 
 /* Menuiserie Rob'in Wood
  *
@@ -273,19 +289,40 @@ button {
   button {
     bottom: 10px; } }
 
-@media only screen and (max-width: 360px) {
-  .about .section-title h2 {
-    font-size: 25px; }
-  .about .section-title p {
-    text-align: justify; }
-  .about .about-text .row .picture-wrapper.left img,
-  .about .about-text .row:last-child .picture-wrapper.right img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50% 50% 50% 50%;
-    margin: auto; }
+@media only screen and (max-width: 600px) {
   .about .about-text h3 {
-    margin-top: 30px; } }
+    font-size: 22px;
+    text-align: center;
+    margin: 20px 0; }
+  .about .about-text .row .picture-wrapper.left img {
+    border-radius: 50% 50% 50% 0%;
+    width: 100px;
+    height: 100px; }
+  .about .about-text .row:last-child .picture-wrapper.right img {
+    border-radius: 50% 0% 50% 50%;
+    margin-top: 10px;
+    width: 100px;
+    height: 100px; }
+  .add-bull-responsive img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50% 50% 0% 50%;
+    margin-top: -100px; }
+  .add-bull-responsive-bis img {
+    float: right;
+    border-radius: 0% 50% 50% 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: -100px; }
+  .button-gallery-responsive {
+    bottom: -120%;
+    right: 50%;
+    height: 30px;
+    width: 100px;
+    font-size: 14px;
+    transform: translateX(50px); }
+    .button-gallery-responsive:hover {
+      transform: translateX(50px) translateY(0px); } }
 
 /* Menuiserie Rob'in Wood
  *
@@ -435,11 +472,46 @@ button {
     .shop-text-wrapper .shop-sizing-carousel .owl-dots {
       display: none !important; }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 992px) {
+  .shop-text-wrapper h2 {
+    text-align: center; }
+  .shop-text-wrapper p {
+    font-size: 16px; }
+  .shop-text-wrapper .line {
+    margin: auto; }
   .shop #click-to-rotate {
     display: none; }
   .shop .shop-text-wrapper {
-    padding-top: 20vh; } }
+    padding-top: 15vh; } }
+
+@media only screen and (max-width: 414px) {
+  .shop-text-wrapper p {
+    font-size: 14px;
+    margin: 20px 0% 50px 0%; }
+  .shop-text-wrapper .shop-sizing-carousel .shop-item {
+    height: 160px;
+    width: 250px; } }
+
+@media only screen and (max-width: 375px) {
+  .shop-text-wrapper h2 {
+    margin-top: 20px; }
+  .shop-text-wrapper p {
+    font-size: 13px;
+    margin: 20px 0% 50px 0%; }
+  .shop-text-wrapper .shop-sizing-carousel .shop-item {
+    height: 140px;
+    width: 220px; } }
+
+@media only screen and (max-width: 340px) {
+  .shop-text-wrapper h2 {
+    font-size: 26px;
+    margin-top: 30px; }
+  .shop-text-wrapper p {
+    font-size: 13px;
+    margin: 20px 0% 30px 0%; }
+  .shop-text-wrapper .shop-sizing-carousel .shop-item {
+    height: 120px;
+    width: 220px; } }
 
 /* Menuiserie Rob'in Wood
  *
@@ -725,7 +797,9 @@ button {
       text-transform: uppercase; }
     .contact .main-form-text .form-text-wrapper img {
       padding-top: 30px;
-      width: 150px; }
+      width: 150px;
+      margin-left: 50%;
+      transform: translateX(-75px); }
     .contact .main-form-text .form-text-wrapper p {
       margin-top: 50px; }
   .contact .main-form {
@@ -807,43 +881,78 @@ button {
       color: #fff;
       margin: auto auto; }
 
-@media only screen and (max-width: 768px) {
-  .contact::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.35);
-    z-index: -1; }
-  .contact .main-form-text {
-    margin-top: 10vh; }
-    .contact .main-form-text .form-text-wrapper h2 {
-      text-align: center;
-      margin-bottom: 10px; }
-    .contact .main-form-text .form-text-wrapper .line {
-      margin: auto; }
-    .contact .main-form-text .form-text-wrapper p {
-      text-align: center;
-      margin: 30px 10%; }
-    .contact .main-form-text .form-text-wrapper img {
-      margin-left: 35%;
-      padding-top: 0; }
-  .contact .main-form {
-    width: 100%;
-    height: 100%;
+@media only screen and (max-width: 992px) {
+  .contact {
+    height: 85vh; }
+    .contact::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.35);
+      z-index: -1; }
+    .contact .main-form-text {
+      margin-top: 0vh;
+      padding-top: 23vh;
+      justify-content: flex-start; }
+      .contact .main-form-text .form-text-wrapper h2 {
+        text-align: center;
+        margin-bottom: 10px; }
+      .contact .main-form-text .form-text-wrapper .line {
+        margin: auto; }
+      .contact .main-form-text .form-text-wrapper p {
+        text-align: center;
+        margin: 30px 10%;
+        font-size: 16px; }
+      .contact .main-form-text .form-text-wrapper img {
+        padding-top: 20px; }
+    .contact .main-form {
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center; }
+      .contact .main-form form {
+        padding-top: 2vh;
+        height: 100%; }
+        .contact .main-form form label {
+          color: #333333; }
+        .contact .main-form form label.radio-inline {
+          color: white !important; }
+        .contact .main-form form .submit {
+          margin-top: 50px; }
+  .to-email {
+    margin: auto;
+    display: flex;
     justify-content: center;
-    align-items: center; }
-    .contact .main-form form {
-      padding-top: 2vh;
-      height: 100%; }
-      .contact .main-form form label {
-        color: #333333; }
-      .contact .main-form form label.radio-inline {
-        color: white !important; }
-      .contact .main-form form .submit {
-        margin-top: 50px; } }
+    width: 100%; }
+    .to-email a {
+      text-align: center;
+      text-decoration: none;
+      color: #508c70;
+      font-weight: 700; } }
+
+@media only screen and (max-width: 414px) {
+  .contact .main-form-text {
+    padding-top: 13vh; }
+  .contact .main-form-text .form-text-wrapper p {
+    margin: 30px 0%;
+    font-size: 14px; }
+  .annu-margin {
+    margin: 0; } }
+
+.contact footer .icon-wrapper {
+  height: 25px;
+  width: 25px;
+  margin: 0px 10px; }
+
+@media only screen and (max-width: 375px) {
+  .contact .main-form-text .form-text-wrapper p {
+    margin: 20px 0%;
+    font-size: 13px; }
+  .contact .main-form-text {
+    padding-top: 10vh; } }
 
 /***
 .......Main colors
