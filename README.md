@@ -26,14 +26,12 @@ http://www.rob-in-wood.be/
 - Design
 - Use of Figma
 - Web editing
-- Clear code
 - Css tricks and animations
 - Js
 - Bootstrap Framework
-- use of libraries : owl carousel, fullPage
-- Contact form Php
+- use of libraries : owl carousel
 - Deployment
 
 ## Comment
 
-This first web site was a real pleasure to realize. I really liked thinking about desing, web editing and custommer approach and all others aspects. I have learned **A LOT** by doing this.
+This first web site was a real pleasure to realize. I have learned **A LOT** by doing this.
