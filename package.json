@@ -19,6 +19,6 @@
   "homepage": "https://github.com/AugustinDumont/Rob-In-Wood#readme",
   "dependencies": {
     "lightbox2": "^2.11.1",
-    "node-sass": "^4.13.0"
+    "node-sass": "^7.0.0"
   }
 }
